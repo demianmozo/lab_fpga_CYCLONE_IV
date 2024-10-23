@@ -1,0 +1,124 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+!s12c _opt1
+R1
+R0
+R1
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/modelsim
+T_opt
+!s110 1729723021
+Ve8OKHPNVE5Lf;XVOM:WBI0
+04 14 8 work testbench_ej_a behavior 1
+=1-001c422b0aad-67197a8c-313-2738
+R1
+Z3 !s12b OEM100
+!s124 OEM10U2 
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2023.3;77
+T_opt1
+!s110 1729722843
+VeLE:3TQ:eHddIB;jg;Vdc1
+04 4 10 work ej_a behavioral 1
+=1-001c422b0aad-671979da-2d3-4088
+R1
+R3
+!s124 OEM10U1 
+R4
+R5
+n@_opt1
+R6
+R2
+Eej_a
+Z7 w1729650949
+Z8 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z9 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 4
+Z10 d//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/questa/work
+Z11 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd
+Z12 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd
+l0
+L4 1
+VC?^QmTKm:>b8Ylj2R[B[g3
+!s100 iCC0R:V`AcOTAXaRU=HAh0
+Z13 OL;C;2023.3;77
+32
+Z14 !s110 1729723006
+!i10b 1
+Z15 !s108 1729723006.000000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd|
+Z17 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd|
+!i113 0
+Z18 o-work work -2002 -explicit
+Z19 tExplicit 1 CvgOpt 0
+Abehavioral
+R8
+R9
+DEx4 work 4 ej_a 0 22 C?^QmTKm:>b8Ylj2R[B[g3
+!i122 4
+l13
+L11 5
+Vke7OKK]VD_BIZRikO;MJ31
+!s100 53le<IoKBaAF:Y6okGB?B1
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 0
+R18
+R19
+Etestbench_ej_a
+Z20 w1729722919
+R8
+R9
+!i122 3
+R10
+Z21 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd
+Z22 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd
+l0
+L4 1
+Vb4A?d>bVMiA1L;6dB:4581
+!s100 dU2WkcRd>D_:9P2d8^>ji2
+R13
+32
+R14
+!i10b 1
+R15
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd|
+Z24 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd|
+!i113 0
+R18
+R19
+Abehavior
+R8
+R9
+DEx4 work 14 testbench_ej_a 0 22 b4A?d>bVMiA1L;6dB:4581
+!i122 3
+l25
+L7 67
+V`2ghnVieII^M1@G9SjiDV2
+!s100 26_]0[zH25EcVP@JkMJMW3
+R13
+32
+R14
+!i10b 1
+R15
+R23
+R24
+!i113 0
+R18
+R19

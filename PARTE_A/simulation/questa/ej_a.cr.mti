@@ -1,0 +1,32 @@
+//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity testbench_ej_a
+-- Compiling architecture behavior of testbench_ej_a
+
+} {} {}} //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ej_a_6_1200mv_0c_slow.vho {2 {vcom -work work -2002 -explicit -vopt -stats=none //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ej_a_6_1200mv_0c_slow.vho
+Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package VITAL_Timing
+-- Loading package VITAL_Primitives
+-- Loading package cycloneive_atom_pack
+-- Loading package cycloneive_components
+-- Compiling entity hard_block
+-- Compiling architecture structure of hard_block
+** Warning: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ej_a_6_1200mv_0c_slow.vho(78): (vcom-1615) Existing entity 'ej_a' at //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd(4) will be overwritten.
+-- Compiling entity ej_a
+-- Compiling architecture structure of ej_a
+
+} {} {}} //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ej_a
+-- Compiling architecture Behavioral of ej_a
+
+} {} {}}

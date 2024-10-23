@@ -20,7 +20,7 @@ ARCHITECTURE behavior OF testbench_ej_a IS
     signal SW1 : std_logic := '0';
     signal SW2 : std_logic := '0';
     signal SW3 : std_logic := '0';
-    signal LED : std_logic;
+    signal LED : std_logic := '0';
 
 BEGIN
 
@@ -65,9 +65,9 @@ BEGIN
         
         -- Test Case 8
         SW1 <= '1'; SW2 <= '1'; SW3 <= '1';
-        wait for 10 ns;
-        
-        wait;
+        wait for 10 ns; 
+
+        wait;  -- End of stimulus
     end process;
 
 END;

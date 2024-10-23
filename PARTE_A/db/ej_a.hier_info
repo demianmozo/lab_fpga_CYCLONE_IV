@@ -1,15 +1,8 @@
-|Block2
-LED <= ej_a:inst.LED
-SW1 => ej_a:inst.SW1
-SW2 => ej_a:inst.SW2
-SW3 => ej_a:inst.SW3
-
-
-|Block2|ej_a:inst
+|ej_a
 SW1 => LED.IN0
 SW2 => LED.IN0
 SW2 => LED.IN1
 SW3 => LED.IN1
-LED <= LED.DB_MAX_OUTPUT_PORT_TYPE
+LED << LED.DB_MAX_OUTPUT_PORT_TYPE
 
 

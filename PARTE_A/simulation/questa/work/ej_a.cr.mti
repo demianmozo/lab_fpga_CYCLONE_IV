@@ -1,0 +1,17 @@
+//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity testbench_ej_a
+-- Compiling architecture behavior of testbench_ej_a
+
+} {} {}} //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ej_a
+-- Compiling architecture Behavioral of ej_a
+
+} {} {}}

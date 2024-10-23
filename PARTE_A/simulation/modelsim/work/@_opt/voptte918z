@@ -1,0 +1,91 @@
+m255
+K3
+z0
+!s12c _opt
+Z0 !s99 nomlopt
+!s11e MIXED_VERSIONS
+13
+cModel Technology
+dC:\altera\13.0sp1
+T_opt
+!s110 1729721243
+V9c8KXMEI46jM5?I@8E<3J1
+04 14 8 work testbench_ej_a behavior 1
+=1-001c422b0aad-6719739a-296-8e0
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Eej_a
+Z1 w1729650949
+Z2 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z3 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+Z4 d//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/modelsim
+Z5 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd
+Z6 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd
+l0
+L4 1
+VC?^QmTKm:>b8Ylj2R[B[g3
+!s100 iCC0R:V`AcOTAXaRU=HAh0
+Z7 OL;C;2023.3;77
+32
+Z8 !s110 1729721227
+!i10b 1
+!i113 0
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+DEx4 work 4 ej_a 0 22 C?^QmTKm:>b8Ylj2R[B[g3
+!i122 0
+l13
+L11 5
+Vke7OKK]VD_BIZRikO;MJ31
+!s100 53le<IoKBaAF:Y6okGB?B1
+R7
+32
+R8
+!i10b 1
+!i113 0
+R9
+R10
+Etestbench_ej_a
+Z11 w1729655732
+R2
+R3
+!i122 1
+R4
+Z12 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd
+Z13 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd
+l0
+L4 1
+Vb4A?d>bVMiA1L;6dB:4581
+!s100 dU2WkcRd>D_:9P2d8^>ji2
+R7
+32
+R8
+!i10b 1
+!i113 0
+R9
+R10
+Abehavior
+R2
+R3
+DEx4 work 14 testbench_ej_a 0 22 b4A?d>bVMiA1L;6dB:4581
+!i122 1
+l25
+L7 67
+V5lTI4Q5^V2BVl?5DYnM`i1
+!s100 ^Ta^mTdagC1NWZRO9a3dK0
+R7
+32
+R8
+!i10b 1
+!i113 0
+R9
+R10

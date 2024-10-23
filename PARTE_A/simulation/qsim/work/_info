@@ -3,8 +3,9 @@ K3
 13
 cModel Technology
 Z0 d\\Mac\Home\Desktop\lab_fpga_CYCLONE_IV\PARTE_A\simulation\qsim
+!s11e MIXED_VERSIONS
 Eej_a
-Z1 w1729659580
+Z1 w1729725566
 Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 Pha:T]_MmzTJCYhSbeLPQ1
 Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
@@ -19,7 +20,7 @@ L78
 Vh5M`e_lgFz>EmCR;j44G13
 Z11 OV;C;10.1d;51
 32
-Z12 !s108 1729659580.400000
+Z12 !s108 1729725567.606000
 Z13 !s90 -work|work|ej_a.vho|
 Z14 !s107 ej_a.vho|
 Z15 o-work work -O0
@@ -47,7 +48,7 @@ R15
 R16
 !i10b 1
 Eej_a_vhd_vec_tst
-Z17 w1729659578
+Z17 w1729725565
 R5
 R6
 R8
@@ -60,7 +61,7 @@ VhY8jEckc@<F^[[eVDm=n12
 R11
 32
 !i10b 1
-Z20 !s108 1729659580.510000
+Z20 !s108 1729725567.730000
 Z21 !s90 -work|work|Waveform.vwf.vht|
 Z22 !s107 Waveform.vwf.vht|
 R15

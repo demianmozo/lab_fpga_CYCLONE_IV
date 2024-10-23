@@ -1,0 +1,161 @@
+m255
+K3
+Z0 !s99 nomlopt
+13
+cModel Technology
+Z1 dC:\altera\13.0sp1
+!s12c _opt
+!s11e MIXED_VERSIONS
+T_opt
+V9c8KXMEI46jM5?I@8E<3J1
+04 14 8 work testbench_ej_a behavior 1
+=1-001c422b0aad-6719739a-296-8e0
+Z2 !s99 nomlopt
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+R1
+!s110 1729721243
+!s12b OEM100
+!s124 OEM10U2 
+Eej_a
+Z3 w1729722954
+Z4 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z5 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 Pha:T]_MmzTJCYhSbeLPQ1
+Z6 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z7 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z8 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z9 DPx10 cycloneive 21 cycloneive_components 0 22 mVG;b;]=zAIVfAk:WJ`El1
+Z10 d\\Mac\Home\Desktop\lab_fpga_CYCLONE_IV\PARTE_A\simulation\modelsim
+Z11 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/questa/ej_a.vho
+Z12 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/questa/ej_a.vho
+l0
+L78
+VZ_S4RTOb9Kf50Q7O04k[`2
+!s100 HP;`X6044A;Gln]6k_]^F2
+Z13 OV;C;10.1d;51
+32
+!i10b 1
+Z14 !s108 1729723733.900000
+Z15 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/questa/ej_a.vho|
+Z16 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/questa/ej_a.vho|
+Z17 o-work work -2002 -explicit -O0
+Z18 tExplicit 1
+Astructure
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 4 ej_a 0 22 Z_S4RTOb9Kf50Q7O04k[`2
+l121
+L94
+V?H1EWX=JoeTh1zG`_oVZ40
+!s100 zHnlcCA5ZNO3@e4;76MzS2
+R13
+32
+!i10b 1
+R14
+R15
+R16
+R17
+R18
+Abehavioral
+R7
+R8
+DEx4 work 4 ej_a 0 22 Y^Vz_nJUHN[ejk]GmMT9B1
+l13
+L11
+Vn<3D^fbg;g9ITQ?e57oaQ3
+R13
+32
+!s108 1729723316.382000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd|
+!s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd|
+R17
+R18
+F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd
+w1729650949
+8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/ej_a.vhd
+!s100 jod12kDX567KeGgTj?:Z@1
+!i10b 1
+Ehard_block
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+l0
+L35
+VD9FDEXa[OFPLPD:?oXQDg1
+!s100 >?P07FeHTlkQ]D[:a1EYW1
+R13
+32
+!i10b 1
+R14
+R15
+R16
+R17
+R18
+Astructure
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 10 hard_block 0 22 D9FDEXa[OFPLPD:?oXQDg1
+l65
+L51
+VGbY;_mUdOjEz>@:5g;W1O2
+!s100 n5ROgQHRbX=V=`FD[cb?90
+R13
+32
+!i10b 1
+R14
+R15
+R16
+R17
+R18
+Etestbench_ej_a
+Z19 w1729722919
+R7
+R8
+R10
+Z20 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd
+Z21 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd
+l0
+L4
+VDmO>9S:^b_fEnL7e30K^j1
+R13
+32
+Z22 !s108 1729723316.477000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd|
+Z24 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/testbench_ej_a.vhd|
+R17
+R18
+!s100 ;Y7BVgbGZhef2oG<DK5390
+!i10b 1
+Abehavior
+R7
+R8
+DEx4 work 14 testbench_ej_a 0 22 DmO>9S:^b_fEnL7e30K^j1
+l25
+L7
+VQ@gJ1[I:^bjMk1m?>nWiG0
+R13
+32
+R22
+R23
+R24
+R17
+R18
+!s100 z5TVJ]GLKP`hTPcl^jNJ;1
+!i10b 1

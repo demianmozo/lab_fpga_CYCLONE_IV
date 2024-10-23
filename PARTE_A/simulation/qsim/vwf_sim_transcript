@@ -1,6 +1,6 @@
 Determining the location of the ModelSim executable...
 
-Using: C:/altera/13.0sp1/modelsim_ase/win32aloem
+Using: c:/altera/13.0sp1/modelsim_ase/win32aloem
 
 To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
 Note: if both Questa Intel FPGA Edition and ModelSim executables are available, Questa Intel FPGA Edition will be used.
@@ -28,7 +28,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Oct 23 01:59:37 2024
+    Info: Processing started: Wed Oct 23 20:19:24 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_a -c ej_a --vector_source=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/Waveform.vwf --testbench_file=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/Waveform.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -57,7 +57,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Oct 23 01:59:38 2024
+    Info: Processing started: Wed Oct 23 20:19:26 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ ej_a -c ej_a
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file ej_a_6_1200mv_85c_slow.vho in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
@@ -69,9 +69,9 @@ Info (204019): Generated file ej_a_6_1200mv_0c_vhd_slow.sdo in folder "//Mac/Hom
 Info (204019): Generated file ej_a_min_1200mv_0c_vhd_fast.sdo in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file ej_a_vhd.sdo in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 13066 megabytes
-    Info: Processing ended: Wed Oct 23 01:59:39 2024
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 13067 megabytes
+    Info: Processing ended: Wed Oct 23 20:19:26 2024
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -84,7 +84,7 @@ Completed successfully.
 
 **** Running the ModelSim simulation ****
 
-C:/altera/13.0sp1/modelsim_ase/win32aloem/vsim -c -do ej_a.do
+c:/altera/13.0sp1/modelsim_ase/win32aloem/vsim -c -do ej_a.do
 
 Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
 
@@ -176,7 +176,7 @@ Reading //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ej_a.msim
 
 Processing channel transitions... 
 
-Writing the resulting VWF to //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ej_a_20241023015941.sim.vwf
+Writing the resulting VWF to //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ej_a_20241023201928.sim.vwf
 
 Finished VCD to VWF conversion.
 

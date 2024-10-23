@@ -1,93 +1,28 @@
-vcom ej_a.vhd
-# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 02:25:54 on Oct 23,2024
-# vcom -reportprogress 300 ej_a.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ej_a
-# -- Compiling architecture Behavioral of ej_a
-# End time: 02:25:54 on Oct 23,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom testbench_ej_a.vhd
-# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 02:25:54 on Oct 23,2024
-# vcom -reportprogress 300 testbench_ej_a.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity testbench_ej_a
-# -- Compiling architecture behavior of testbench_ej_a
-# End time: 02:25:54 on Oct 23,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-
-vsim -L cycloneive -L altera -L altera_mf work.testbench_ej_a
-# vsim -L cycloneive -L altera -L altera_mf work.testbench_ej_a 
-# Start time: 02:26:17 on Oct 23,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.testbench_ej_a(behavior)#1
-
-# Causality operation skipped due to absence of debug database file
-run
-# Break key hit
-vsim -L cycloneive -L altera -L altera_mf work.ej_a work.testbench_ej_a
-# End time: 02:30:46 on Oct 23,2024, Elapsed time: 0:04:29
-# Errors: 0, Warnings: 5
-# vsim -L cycloneive -L altera -L altera_mf work.ej_a work.testbench_ej_a 
-# Start time: 02:30:46 on Oct 23,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.ej_a(behavioral)#2
-# Loading work.testbench_ej_a(behavior)#1
-add wave -position end  sim:/ej_a/LED
-add wave -position end  sim:/ej_a/SW1
-add wave -position end  sim:/ej_a/SW2
-add wave -position end  sim:/ej_a/SW3
-add wave  \
-sim:/ej_a/LED \
-sim:/ej_a/SW1 \
-sim:/ej_a/SW2 \
-sim:/ej_a/SW3
-run -all
-
-run 1000ns
-
+# Compile of ej_a.vhd was successful.
+# Compile of testbench_ej_a.vhd was successful.
+# Compile of ej_a_6_1200mv_0c_slow.vho was successful with warnings.
+# 3 compiles, 0 failed with no errors.
 vsim work.testbench_ej_a
-# End time: 02:35:20 on Oct 23,2024, Elapsed time: 0:04:34
-# Errors: 0, Warnings: 1
 # vsim work.testbench_ej_a 
-# Start time: 02:35:20 on Oct 23,2024
+# Start time: 19:55:24 on Oct 23,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
 # Loading work.testbench_ej_a(behavior)#1
-run -all
-
-run -all
-vsim work.ej_a work.testbench_ej_a
-# End time: 02:35:52 on Oct 23,2024, Elapsed time: 0:00:32
-# Errors: 0, Warnings: 1
-# vsim work.ej_a work.testbench_ej_a 
-# Start time: 02:35:52 on Oct 23,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.ej_a(behavioral)#2
-# Loading work.testbench_ej_a(behavior)#1
-add wave -position end  sim:/ej_a/LED
-add wave -position end  sim:/ej_a/SW1
-add wave -position end  sim:/ej_a/SW2
-add wave -position end  sim:/ej_a/SW3
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)#1
+# Loading cycloneive.cycloneive_io_ibuf(arch)#1
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)#1
+add wave -position insertpoint  \
+sim:/testbench_ej_a/LED \
+sim:/testbench_ej_a/SW1 \
+sim:/testbench_ej_a/SW2 \
+sim:/testbench_ej_a/SW3
 run
-run -continue
-run -all
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/wave.do
-# End time: 02:37:45 on Oct 23,2024, Elapsed time: 0:01:53
-# Errors: 0, Warnings: 1
+# End time: 20:09:38 on Oct 23,2024, Elapsed time: 0:14:14
+# Errors: 0, Warnings: 8

@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
--- DATE "10/23/2024 02:52:50"
+-- DATE "10/23/2024 20:17:32"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -75,14 +75,14 @@ LIBRARY IEEE;
 USE CYCLONEIVE.CYCLONEIVE_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
 
-ENTITY 	Block2 IS
+ENTITY 	ej_a IS
     PORT (
-	LED : OUT std_logic;
 	SW1 : IN std_logic;
 	SW2 : IN std_logic;
-	SW3 : IN std_logic
+	SW3 : IN std_logic;
+	LED : BUFFER std_logic
 	);
-END Block2;
+END ej_a;
 
 -- Design Ports Information
 -- LED	=>  Location: PIN_A15,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -91,7 +91,7 @@ END Block2;
 -- SW1	=>  Location: PIN_M1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
-ARCHITECTURE structure OF Block2 IS
+ARCHITECTURE structure OF ej_a IS
 SIGNAL gnd : std_logic := '0';
 SIGNAL vcc : std_logic := '1';
 SIGNAL unknown : std_logic := 'X';
@@ -101,15 +101,15 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_LED : std_logic;
 SIGNAL ww_SW1 : std_logic;
 SIGNAL ww_SW2 : std_logic;
 SIGNAL ww_SW3 : std_logic;
+SIGNAL ww_LED : std_logic;
 SIGNAL \LED~output_o\ : std_logic;
 SIGNAL \SW1~input_o\ : std_logic;
 SIGNAL \SW3~input_o\ : std_logic;
 SIGNAL \SW2~input_o\ : std_logic;
-SIGNAL \inst|LED~combout\ : std_logic;
+SIGNAL \LED~0_combout\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -120,10 +120,10 @@ END COMPONENT;
 
 BEGIN
 
-LED <= ww_LED;
 ww_SW1 <= SW1;
 ww_SW2 <= SW2;
 ww_SW3 <= SW3;
+LED <= ww_LED;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
@@ -141,7 +141,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \inst|LED~combout\,
+	i => \LED~0_combout\,
 	devoe => ww_devoe,
 	o => \LED~output_o\);
 
@@ -179,9 +179,9 @@ PORT MAP (
 	o => \SW2~input_o\);
 
 -- Location: LCCOMB_X26_Y30_N0
-\inst|LED\ : cycloneive_lcell_comb
+\LED~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \inst|LED~combout\ = (\SW1~input_o\ & ((!\SW2~input_o\))) # (!\SW1~input_o\ & ((\SW3~input_o\) # (\SW2~input_o\)))
+-- \LED~0_combout\ = (\SW1~input_o\ & ((!\SW2~input_o\))) # (!\SW1~input_o\ & ((\SW3~input_o\) # (\SW2~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -192,7 +192,7 @@ PORT MAP (
 	dataa => \SW1~input_o\,
 	datac => \SW3~input_o\,
 	datad => \SW2~input_o\,
-	combout => \inst|LED~combout\);
+	combout => \LED~0_combout\);
 
 ww_LED <= \LED~output_o\;
 END structure;
