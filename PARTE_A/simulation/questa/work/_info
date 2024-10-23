@@ -1,0 +1,137 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+!s12c _opt2
+R1
+!s12c _opt1
+R1
+R0
+R1
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A
+T_opt
+!s110 1729661753
+V4]Oj>;T^:F_01b;480?Fa1
+Z3 04 4 10 work ej_a behavioral 2
+Z4 04 14 8 work testbench_ej_a behavior 1
+=1-001c422b0aad-67188b38-34f-3df0
+R1
+Z5 !s12b OEM100
+Z6 !s124 OEM10U3 
+Z7 o-quiet -auto_acc_if_foreign -work work
+Z8 tCvgOpt 0
+n@_opt
+Z9 OL;O;2023.3;77
+T_opt1
+!s110 1729661447
+Vio3lMF[ik10??^cZR_ead1
+R3
+R4
+=1-001c422b0aad-67188a07-256-324c
+R1
+R5
+R6
+o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf
+R8
+n@_opt1
+R9
+R2
+T_opt2
+!s110 1729661721
+V]iK7^^ThQ9iIghSWgD=Fh3
+R4
+=1-001c422b0aad-67188b18-28c-410c
+R1
+R5
+!s124 OEM10U2 
+R7
+R8
+n@_opt2
+R9
+R2
+Eej_a
+Z10 w1729650949
+Z11 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z12 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+R2
+Z13 8ej_a.vhd
+Z14 Fej_a.vhd
+l0
+L4 1
+V1fJefg389QIKU<08oJaGL1
+!s100 iCC0R:V`AcOTAXaRU=HAh0
+Z15 OL;C;2023.3;77
+32
+Z16 !s110 1729661154
+!i10b 1
+Z17 !s108 1729661154.000000
+Z18 !s90 -reportprogress|300|ej_a.vhd|
+Z19 !s107 ej_a.vhd|
+!i113 0
+Z20 tExplicit 1 CvgOpt 0
+Abehavioral
+R11
+R12
+DEx4 work 4 ej_a 0 22 1fJefg389QIKU<08oJaGL1
+!i122 0
+l13
+L11 5
+VbAN>gki[PK0Oe63]E@ac71
+!s100 53le<IoKBaAF:Y6okGB?B1
+R15
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 0
+R20
+Etestbench_ej_a
+Z21 w1729655732
+R11
+R12
+!i122 1
+R2
+Z22 8testbench_ej_a.vhd
+Z23 Ftestbench_ej_a.vhd
+l0
+L4 1
+VK1mPA60gDi7lP8>BGZB2H2
+!s100 dU2WkcRd>D_:9P2d8^>ji2
+R15
+32
+R16
+!i10b 1
+R17
+Z24 !s90 -reportprogress|300|testbench_ej_a.vhd|
+Z25 !s107 testbench_ej_a.vhd|
+!i113 0
+R20
+Abehavior
+R11
+R12
+DEx4 work 14 testbench_ej_a 0 22 K1mPA60gDi7lP8>BGZB2H2
+!i122 1
+l25
+L7 67
+Vbj3bO`10=?ZcKZJSE18Gd0
+!s100 ^Ta^mTdagC1NWZRO9a3dK0
+R15
+32
+R16
+!i10b 1
+R17
+R24
+R25
+!i113 0
+R20
