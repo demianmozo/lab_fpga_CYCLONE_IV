@@ -1,5 +1,5 @@
 Flow report for ej_a
-Wed Oct 23 20:19:26 2024
+Wed Oct 23 20:22:41 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Wed Oct 23 20:19:26 2024          ;
+; Flow Status                        ; Successful - Wed Oct 23 20:22:41 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_a                                           ;
 ; Top-level Entity Name              ; ej_a                                           ;
@@ -119,7 +119,9 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 13051 MB            ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 13050 MB            ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 13067 MB            ; 00:00:01                           ;
-; Total                ; 00:00:42     ; --                      ; --                  ; 00:01:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 13051 MB            ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 13051 MB            ; 00:00:01                           ;
+; Total                ; 00:00:43     ; --                      ; --                  ; 00:01:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -132,6 +134,8 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; DemianPC         ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DemianPC         ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DemianPC         ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DemianPC         ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DemianPC         ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DemianPC         ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DemianPC         ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DemianPC         ; Windows 10 ; 10.0       ; x86_64         ;
@@ -156,6 +160,8 @@ quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_f
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ ej_a -c ej_a
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_a -c ej_a --vector_source=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/Waveform.vwf --testbench_file=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/Waveform.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ ej_a -c ej_a
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_a -c ej_a --vector_source=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/Waveform.vwf --testbench_file=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ ej_a -c ej_a
 
 
 

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ej_a
-Wed Oct 23 20:19:26 2024
+Wed Oct 23 20:22:41 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Oct 23 20:19:26 2024 ;
+; EDA Netlist Writer Status ; Successful - Wed Oct 23 20:22:41 2024 ;
 ; Revision Name             ; ej_a                                  ;
 ; Top-level Entity Name     ; ej_a                                  ;
 ; Family                    ; Cyclone IV E                          ;
@@ -51,8 +51,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                                            ; Setting                  ;
 +---------------------------------------------------------------------------------------------------+--------------------------+
 ; Tool Name                                                                                         ; Questa Intel FPGA (VHDL) ;
-; Generate functional simulation netlist                                                            ; Off                      ;
-; Time scale                                                                                        ; 1 ps                     ;
+; Generate functional simulation netlist                                                            ; On                       ;
 ; Truncate long hierarchy paths                                                                     ; Off                      ;
 ; Map illegal HDL characters                                                                        ; Off                      ;
 ; Flatten buses into individual nodes                                                               ; Off                      ;
@@ -67,20 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+--------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                      ;
-+-------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                 ;
-+-------------------------------------------------------------------------------------------------+
-; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//ej_a_6_1200mv_85c_slow.vho      ;
-; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//ej_a_6_1200mv_0c_slow.vho       ;
-; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//ej_a_min_1200mv_0c_fast.vho     ;
-; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//ej_a.vho                        ;
-; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//ej_a_6_1200mv_85c_vhd_slow.sdo  ;
-; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//ej_a_6_1200mv_0c_vhd_slow.sdo   ;
-; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//ej_a_min_1200mv_0c_vhd_fast.sdo ;
-; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//ej_a_vhd.sdo                    ;
-+-------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Simulation Generated Files                                               ;
++--------------------------------------------------------------------------+
+; Generated Files                                                          ;
++--------------------------------------------------------------------------+
+; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//ej_a.vho ;
++--------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -103,20 +95,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Oct 23 20:19:26 2024
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ ej_a -c ej_a
+    Info: Processing started: Wed Oct 23 20:22:41 2024
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim/ ej_a -c ej_a
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file ej_a_6_1200mv_85c_slow.vho in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ej_a_6_1200mv_0c_slow.vho in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ej_a_min_1200mv_0c_fast.vho in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file ej_a.vho in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ej_a_6_1200mv_85c_vhd_slow.sdo in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ej_a_6_1200mv_0c_vhd_slow.sdo in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ej_a_min_1200mv_0c_vhd_fast.sdo in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ej_a_vhd.sdo in folder "//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 13067 megabytes
-    Info: Processing ended: Wed Oct 23 20:19:26 2024
+    Info: Peak virtual memory: 13051 megabytes
+    Info: Processing ended: Wed Oct 23 20:22:41 2024
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
