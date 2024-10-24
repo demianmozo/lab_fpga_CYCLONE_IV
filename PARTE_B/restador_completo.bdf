@@ -1,0 +1,232 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 384 344 552 360)
+	(text "INPUT" (rect 125 0 178 18)(font "Arial" (font_size 6)))
+	(text "in_a" (rect 5 0 46 22)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 169 25)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 392 392 560 408)
+	(text "INPUT" (rect 125 0 178 18)(font "Arial" (font_size 6)))
+	(text "in_b" (rect 5 0 47 22)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 169 25)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 384 432 560 448)
+	(text "INPUT" (rect 133 0 186 18)(font "Arial" (font_size 6)))
+	(text "in_B_in" (rect 5 0 79 22)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 177 25)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 440 576 608 592)
+	(text "INPUT" (rect 125 0 178 18)(font "Arial" (font_size 6)))
+	(text "clk" (rect 5 0 32 22)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 169 25)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 1200 304 1376 320)
+	(text "OUTPUT" (rect 1 0 75 18)(font "Arial" (font_size 6)))
+	(text "o_R" (rect 90 0 132 22)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1128 456 1308 472)
+	(text "OUTPUT" (rect 1 0 75 18)(font "Arial" (font_size 6)))
+	(text "o_B_out" (rect 90 0 174 22)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 752 376 920 488)
+	(text "restador_completo" (rect 5 0 193 22)(font "Arial" ))
+	(text "inst" (rect 8 96 42 118)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "in_a" (rect 0 0 41 22)(font "Arial" ))
+		(text "in_a" (rect 21 27 62 49)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "in_b" (rect 0 0 42 22)(font "Arial" ))
+		(text "in_b" (rect 21 43 63 65)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "in_B_in" (rect 0 0 74 22)(font "Arial" ))
+		(text "in_B_in" (rect 21 59 95 81)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "clk" (rect 0 0 27 22)(font "Arial" ))
+		(text "clk" (rect 21 75 48 97)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "o_R" (rect 0 0 42 22)(font "Arial" ))
+		(text "o_R" (rect 112 27 154 49)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "o_B_out" (rect 0 0 84 22)(font "Arial" ))
+		(text "o_B_out" (rect 76 43 160 65)(font "Arial" ))
+		(line (pt 168 48)(pt 152 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 96))
+	)
+)
+(connector
+	(pt 752 408)
+	(pt 744 408)
+)
+(connector
+	(pt 752 424)
+	(pt 736 424)
+)
+(connector
+	(pt 920 424)
+	(pt 928 424)
+)
+(connector
+	(pt 752 456)
+	(pt 720 456)
+)
+(connector
+	(pt 720 456)
+	(pt 720 584)
+)
+(connector
+	(pt 720 584)
+	(pt 608 584)
+)
+(connector
+	(pt 560 440)
+	(pt 752 440)
+)
+(connector
+	(pt 736 424)
+	(pt 736 400)
+)
+(connector
+	(pt 736 400)
+	(pt 560 400)
+)
+(connector
+	(pt 744 408)
+	(pt 744 352)
+)
+(connector
+	(pt 744 352)
+	(pt 552 352)
+)
+(connector
+	(pt 920 408)
+	(pt 928 408)
+)
+(connector
+	(pt 928 312)
+	(pt 1200 312)
+)
+(connector
+	(pt 928 312)
+	(pt 928 408)
+)
+(connector
+	(pt 928 464)
+	(pt 1128 464)
+)
+(connector
+	(pt 928 464)
+	(pt 928 424)
+)

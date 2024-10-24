@@ -7,8 +7,8 @@ clk => D_FF:D2.CLOCK
 clk => D_FF:D3.CLOCK
 clk => D_FF:D4.CLOCK
 clk => D_FF:D5.CLOCK
-o_R <= D_FF:D5.Q
-o_B_out <= D_FF:D4.Q
+o_R << D_FF:D5.Q
+o_B_out << D_FF:D4.Q
 
 
 |restador_completo|D_FF:D1

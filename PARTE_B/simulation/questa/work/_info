@@ -1,0 +1,152 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_A/simulation/questa
+T_opt
+!s110 1729736246
+V3hXLEQMShPPf;@UNjoVl[1
+04 20 10 work tb_restador_completo behavioral 1
+=1-001c422b0aad-6719ae35-21f-7e8
+R0
+!s12b OEM100
+!s124 OEM10U7 
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Ed_ff
+Z1 w1729729843
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 o4hn5gYc0WVo72BSL@Ta50
+Z3 DPx4 ieee 15 std_logic_arith 0 22 B[jVX6I8iRX2o6WYW0BB>3
+Z4 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z5 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+Z6 d//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/simulation/questa
+Z7 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/FF_D.vhd
+Z8 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/FF_D.vhd
+l0
+L6 1
+V71W@D908>B:`Z^K[dPb_53
+!s100 XFd[PH^NNB2=JdOg7Lf7:0
+Z9 OL;C;2023.3;77
+32
+Z10 !s110 1729736231
+!i10b 1
+Z11 !s108 1729736231.000000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/FF_D.vhd|
+Z13 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/FF_D.vhd|
+!i113 0
+Z14 o-work work -2002 -explicit
+Z15 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 4 d_ff 0 22 71W@D908>B:`Z^K[dPb_53
+!i122 0
+l15
+L14 9
+VkilPHm?jl2<DKk45McFe03
+!s100 f=QmobURl>V3^dYRXNb@K2
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Erestador_completo
+Z16 w1729730090
+R4
+R5
+!i122 1
+R6
+Z17 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/restador_completo.vhd
+Z18 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/restador_completo.vhd
+l0
+L4 1
+VQ]M7D@41>8dS>PdN:_d3W3
+!s100 O_N9Pz2L@lj6O=kPk>Ujg3
+R9
+32
+R10
+!i10b 1
+R11
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/restador_completo.vhd|
+Z20 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/restador_completo.vhd|
+!i113 0
+R14
+R15
+Abehavioral
+R4
+R5
+DEx4 work 17 restador_completo 0 22 Q]M7D@41>8dS>PdN:_d3W3
+!i122 1
+l26
+L15 23
+V>GnznfUI3]][T1QZ@;@dm3
+!s100 NHI4<CCN6iha9;1APM:h<0
+R9
+32
+R10
+!i10b 1
+R11
+R19
+R20
+!i113 0
+R14
+R15
+Etb_restador_completo
+Z21 w1729736054
+R4
+R5
+!i122 2
+R6
+Z22 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/tb_restador_completo.vhd
+Z23 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/tb_restador_completo.vhd
+l0
+L4 1
+V=:XDiWjj1U=B>hNz@zTH12
+!s100 o6n`ZFW_YSze=>^k@4C:=0
+R9
+32
+R10
+!i10b 1
+R11
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/tb_restador_completo.vhd|
+Z25 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/tb_restador_completo.vhd|
+!i113 0
+R14
+R15
+Abehavioral
+R4
+R5
+DEx4 work 20 tb_restador_completo 0 22 =:XDiWjj1U=B>hNz@zTH12
+!i122 2
+l29
+L7 86
+V@FibL?MKgV3TKF3hfJ6ZV1
+!s100 fbCR@iDm41k6m9jSB9zPY0
+R9
+32
+R10
+!i10b 1
+R11
+R24
+R25
+!i113 0
+R14
+R15

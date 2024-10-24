@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
--- DATE "10/23/2024 21:35:30"
+-- DATE "10/23/2024 23:24:42"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -83,8 +83,8 @@ ENTITY 	restador_completo IS
 	in_b : IN std_logic;
 	in_B_in : IN std_logic;
 	clk : IN std_logic;
-	o_R : OUT std_logic;
-	o_B_out : OUT std_logic
+	o_R : BUFFER std_logic;
+	o_B_out : BUFFER std_logic
 	);
 END restador_completo;
 

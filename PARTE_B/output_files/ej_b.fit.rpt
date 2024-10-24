@@ -1,5 +1,5 @@
 Fitter report for ej_b
-Wed Oct 23 21:35:21 2024
+Wed Oct 23 23:24:34 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Oct 23 21:35:21 2024          ;
+; Fitter Status                      ; Successful - Wed Oct 23 23:24:34 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_b                                           ;
 ; Top-level Entity Name              ; restador_completo                              ;
@@ -958,7 +958,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN E1 (CLK1, DIFFCLK_0n)) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/restador_completo.vhd Line: 9
+Info (176353): Automatically promoted node clk~input (placed in PIN E1 (CLK1, DIFFCLK_0n)) File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/restador_completo.vhd Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -990,16 +990,16 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.19 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.21 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file /Desktop/lab_fpga_CYCLONE_IV/PARTE_B/output_files/ej_b.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 13974 megabytes
-    Info: Processing ended: Wed Oct 23 21:35:22 2024
+    Info: Peak virtual memory: 13976 megabytes
+    Info: Processing ended: Wed Oct 23 23:24:34 2024
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:08
 
