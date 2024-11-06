@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SDA_int",
+					"strict" : false
+				},
+				{
+					"name" : "hab_dir",
+					"strict" : false
+				},
+				{
+					"name" : "hab_data",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "SDA",
+					"strict" : false
+				},
+				{
+					"name" : "fin_dir",
+					"strict" : false
+				},
+				{
+					"name" : "fin_data",
+					"strict" : false
+				},
+				{
+					"name" : "SOY",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

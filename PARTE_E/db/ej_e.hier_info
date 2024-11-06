@@ -1,0 +1,26 @@
+|control_i2c_esclavo
+reset => reg_fstate.Idle.OUTPUTSELECT
+reset => reg_fstate.Guarda_Dir.OUTPUTSELECT
+reset => reg_fstate.RW.OUTPUTSELECT
+reset => reg_fstate.ACK.OUTPUTSELECT
+reset => reg_fstate.Guarda_Data.OUTPUTSELECT
+reset => reg_SDA_int.OUTPUTSELECT
+reset => reg_hab_dir.OUTPUTSELECT
+reset => reg_hab_data.OUTPUTSELECT
+reset => SDA_int.OUTPUTSELECT
+reset => hab_dir.OUTPUTSELECT
+reset => hab_data.OUTPUTSELECT
+clock => fstate~1.DATAIN
+SDA => Selector0.IN3
+SDA => Selector1.IN1
+SOY => process_1.IN0
+SOY => process_1.IN0
+fin_dir => process_1.IN1
+fin_dir => process_1.IN1
+fin_data => Selector0.IN4
+fin_data => Selector2.IN2
+SDA_int << SDA_int.DB_MAX_OUTPUT_PORT_TYPE
+hab_dir << hab_dir.DB_MAX_OUTPUT_PORT_TYPE
+hab_data << hab_data.DB_MAX_OUTPUT_PORT_TYPE
+
+
