@@ -1,5 +1,5 @@
 Fitter report for ej_c
-Tue Nov  5 20:28:17 2024
+Tue Nov  5 22:23:57 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Nov  5 20:28:17 2024          ;
+; Fitter Status                      ; Successful - Tue Nov  5 22:23:56 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_c                                           ;
 ; Top-level Entity Name              ; restador_4_bits                                ;
@@ -697,30 +697,30 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------+-------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                      ;
-+------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                      ; Entity Name       ; Library Name ;
-+------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------+-------------------+--------------+
-; |restador_4_bits             ; 16 (0)      ; 13 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 15   ; 0            ; 3 (0)        ; 6 (0)             ; 7 (0)            ; |restador_4_bits                         ; restador_4_bits   ; work         ;
-;    |D_FF:inst10|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:inst10             ; D_FF              ; work         ;
-;    |D_FF:inst11|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:inst11             ; D_FF              ; work         ;
-;    |D_FF:inst12|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:inst12             ; D_FF              ; work         ;
-;    |D_FF:inst13|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:inst13             ; D_FF              ; work         ;
-;    |D_FF:inst14|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:inst14             ; D_FF              ; work         ;
-;    |D_FF:inst15|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:inst15             ; D_FF              ; work         ;
-;    |D_FF:inst16|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:inst16             ; D_FF              ; work         ;
-;    |D_FF:inst4|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:inst4              ; D_FF              ; work         ;
-;    |D_FF:inst5|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:inst5              ; D_FF              ; work         ;
-;    |D_FF:inst6|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:inst6              ; D_FF              ; work         ;
-;    |D_FF:inst7|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:inst7              ; D_FF              ; work         ;
-;    |D_FF:inst8|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:inst8              ; D_FF              ; work         ;
-;    |D_FF:inst9|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:inst9              ; D_FF              ; work         ;
-;    |restador_completo:inst1| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|restador_completo:inst1 ; restador_completo ; work         ;
-;    |restador_completo:inst2| ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; |restador_4_bits|restador_completo:inst2 ; restador_completo ; work         ;
-;    |restador_completo:inst3| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |restador_4_bits|restador_completo:inst3 ; restador_completo ; work         ;
-;    |restador_completo:inst|  ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|restador_completo:inst  ; restador_completo ; work         ;
-+------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------+-------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                              ;
++----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                          ; Entity Name       ; Library Name ;
++----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------+-------------------+--------------+
+; |restador_4_bits                 ; 16 (0)      ; 13 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 15   ; 0            ; 3 (0)        ; 6 (0)             ; 7 (0)            ; |restador_4_bits                             ; restador_4_bits   ; work         ;
+;    |D_FF:b2v_inst10|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:b2v_inst10             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst11|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:b2v_inst11             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst12|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:b2v_inst12             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst13|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:b2v_inst13             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst14|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:b2v_inst14             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst15|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:b2v_inst15             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst16|             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|D_FF:b2v_inst16             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst4|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:b2v_inst4              ; D_FF              ; work         ;
+;    |D_FF:b2v_inst5|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:b2v_inst5              ; D_FF              ; work         ;
+;    |D_FF:b2v_inst6|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:b2v_inst6              ; D_FF              ; work         ;
+;    |D_FF:b2v_inst7|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:b2v_inst7              ; D_FF              ; work         ;
+;    |D_FF:b2v_inst8|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:b2v_inst8              ; D_FF              ; work         ;
+;    |D_FF:b2v_inst9|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |restador_4_bits|D_FF:b2v_inst9              ; D_FF              ; work         ;
+;    |restador_completo:b2v_inst1| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|restador_completo:b2v_inst1 ; restador_completo ; work         ;
+;    |restador_completo:b2v_inst2| ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; |restador_4_bits|restador_completo:b2v_inst2 ; restador_completo ; work         ;
+;    |restador_completo:b2v_inst3| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |restador_4_bits|restador_completo:b2v_inst3 ; restador_completo ; work         ;
+;    |restador_completo:b2v_inst|  ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |restador_4_bits|restador_completo:b2v_inst  ; restador_completo ; work         ;
++----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -747,31 +747,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                      ;
-+---------------------------------------+-------------------+---------+
-; Source Pin / Fanout                   ; Pad To Core Index ; Setting ;
-+---------------------------------------+-------------------+---------+
-; B_in                                  ;                   ;         ;
-;      - restador_completo:inst|R~0     ; 0                 ; 6       ;
-;      - restador_completo:inst|B_out~0 ; 0                 ; 6       ;
-; CLOCK                                 ;                   ;         ;
-; A3                                    ;                   ;         ;
-;      - D_FF:inst4|Q~feeder            ; 1                 ; 6       ;
-; B3                                    ;                   ;         ;
-;      - D_FF:inst5|Q~feeder            ; 1                 ; 6       ;
-; B2                                    ;                   ;         ;
-;      - D_FF:inst7|Q~feeder            ; 0                 ; 6       ;
-; A2                                    ;                   ;         ;
-;      - D_FF:inst6|Q~feeder            ; 0                 ; 6       ;
-; A1                                    ;                   ;         ;
-;      - D_FF:inst8|Q~feeder            ; 0                 ; 6       ;
-; B1                                    ;                   ;         ;
-;      - D_FF:inst9|Q~feeder            ; 0                 ; 6       ;
-; A0                                    ;                   ;         ;
-;      - D_FF:inst10|Q                  ; 1                 ; 6       ;
-; B0                                    ;                   ;         ;
-+---------------------------------------+-------------------+---------+
++-------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                          ;
++-------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                       ; Pad To Core Index ; Setting ;
++-------------------------------------------+-------------------+---------+
+; B_in                                      ;                   ;         ;
+;      - restador_completo:b2v_inst|R~0     ; 0                 ; 6       ;
+;      - restador_completo:b2v_inst|B_out~0 ; 0                 ; 6       ;
+; CLOCK                                     ;                   ;         ;
+; A3                                        ;                   ;         ;
+;      - D_FF:b2v_inst4|Q~feeder            ; 1                 ; 6       ;
+; B3                                        ;                   ;         ;
+;      - D_FF:b2v_inst5|Q~feeder            ; 1                 ; 6       ;
+; B2                                        ;                   ;         ;
+;      - D_FF:b2v_inst7|Q~feeder            ; 0                 ; 6       ;
+; A2                                        ;                   ;         ;
+;      - D_FF:b2v_inst6|Q~feeder            ; 0                 ; 6       ;
+; A1                                        ;                   ;         ;
+;      - D_FF:b2v_inst8|Q~feeder            ; 0                 ; 6       ;
+; B1                                        ;                   ;         ;
+;      - D_FF:b2v_inst9|Q~feeder            ; 0                 ; 6       ;
+; A0                                        ;                   ;         ;
+;      - D_FF:b2v_inst10|Q                  ; 1                 ; 6       ;
+; B0                                        ;                   ;         ;
++-------------------------------------------+-------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -1054,7 +1054,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node CLOCK~input (placed in PIN R8 (CLK15, DIFFCLK_6p))
+Info (176353): Automatically promoted node CLOCK~input (placed in PIN R8 (CLK15, DIFFCLK_6p)) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 29
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G18
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1072,7 +1072,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  12 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1085,7 +1085,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1094,8 +1094,8 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file /Desktop/lab_fpga_CYCLONE_IV/PARTE_C/output_files/ej_c.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 13976 megabytes
-    Info: Processing ended: Tue Nov  5 20:28:17 2024
-    Info: Elapsed time: 00:00:08
+    Info: Processing ended: Tue Nov  5 22:23:57 2024
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:09
 
 

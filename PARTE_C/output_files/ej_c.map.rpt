@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ej_c
-Tue Nov  5 21:48:07 2024
+Tue Nov  5 22:23:48 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -10,7 +10,13 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +43,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Nov  5 21:48:07 2024              ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov  5 22:23:48 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_c                                           ;
 ; Top-level Entity Name              ; restador_4_bits                                ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; N/A until Partition Merge                      ;
-;     Total combinational functions  ; N/A until Partition Merge                      ;
-;     Dedicated logic registers      ; N/A until Partition Merge                      ;
-; Total registers                    ; N/A until Partition Merge                      ;
-; Total pins                         ; N/A until Partition Merge                      ;
-; Total virtual pins                 ; N/A until Partition Merge                      ;
-; Total memory bits                  ; N/A until Partition Merge                      ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
-; Total PLLs                         ; N/A until Partition Merge                      ;
+; Total logic elements               ; 18                                             ;
+;     Total combinational functions  ; 10                                             ;
+;     Dedicated logic registers      ; 13                                             ;
+; Total registers                    ; 13                                             ;
+; Total pins                         ; 15                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -149,11 +155,125 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; restador_4_bits.vhd              ; yes             ; User VHDL File  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd   ;         ;
+; restador_completo.vhd            ; yes             ; User VHDL File  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_completo.vhd ;         ;
+; D_FF.vhd                         ; yes             ; User VHDL File  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd              ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 18          ;
+;                                             ;             ;
+; Total combinational functions               ; 10          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 4           ;
+;     -- 3 input functions                    ; 3           ;
+;     -- <=2 input functions                  ; 3           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 10          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 13          ;
+;     -- Dedicated logic registers            ; 13          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 15          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; CLOCK~input ;
+; Maximum fan-out                             ; 13          ;
+; Total fan-out                               ; 77          ;
+; Average fan-out                             ; 1.45        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name       ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-------------------+--------------+
+; |restador_4_bits                 ; 10 (0)              ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |restador_4_bits                             ; restador_4_bits   ; work         ;
+;    |D_FF:b2v_inst10|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst10             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst11|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst11             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst12|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst12             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst13|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst13             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst14|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst14             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst15|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst15             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst16|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst16             ; D_FF              ; work         ;
+;    |D_FF:b2v_inst4|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst4              ; D_FF              ; work         ;
+;    |D_FF:b2v_inst5|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst5              ; D_FF              ; work         ;
+;    |D_FF:b2v_inst6|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst6              ; D_FF              ; work         ;
+;    |D_FF:b2v_inst7|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst7              ; D_FF              ; work         ;
+;    |D_FF:b2v_inst8|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst8              ; D_FF              ; work         ;
+;    |D_FF:b2v_inst9|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|D_FF:b2v_inst9              ; D_FF              ; work         ;
+;    |restador_completo:b2v_inst1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|restador_completo:b2v_inst1 ; restador_completo ; work         ;
+;    |restador_completo:b2v_inst2| ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|restador_completo:b2v_inst2 ; restador_completo ; work         ;
+;    |restador_completo:b2v_inst3| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|restador_completo:b2v_inst3 ; restador_completo ; work         ;
+;    |restador_completo:b2v_inst|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |restador_4_bits|restador_completo:b2v_inst  ; restador_completo ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 13    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 15                          ;
+; cycloneiii_ff         ; 13                          ;
+;     plain             ; 13                          ;
+; cycloneiii_lcell_comb ; 10                          ;
+;     normal            ; 10                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 4                           ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.36                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,7 +282,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Nov  5 21:47:49 2024
+    Info: Processing started: Tue Nov  5 22:23:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ej_c -c ej_c
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -175,14 +295,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file restado
 Info (12021): Found 2 design units, including 1 entities, in source file d_ff.vhd
     Info (12022): Found design unit 1: D_FF-behavioral File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd Line: 14
     Info (12023): Found entity 1: D_FF File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd Line: 6
-Error (12049): Can't compile duplicate declarations of entity "restador_4_bits" into library "work"
-    Error (12180): Instance could be entity "restador_4_bits" in file restador_4_bits.vhd compiled in library work File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 25
-    Error (12180): Instance could be entity "restador_4_bits" in file restador_4_bits.bdf compiled in library work
-Info (12021): Found 1 design units, including 1 entities, in source file restador_4_bits.bdf
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
-    Error: Peak virtual memory: 13218 megabytes
-    Error: Processing ended: Tue Nov  5 21:48:07 2024
-    Error: Elapsed time: 00:00:18
-    Error: Total CPU time (on all processors): 00:00:42
+Info (12021): Found 2 design units, including 1 entities, in source file tb_restador_4_bits.vhd
+    Info (12022): Found design unit 1: tb_restador_4_bits-behavior File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/tb_restador_4_bits.vhd Line: 7
+    Info (12023): Found entity 1: tb_restador_4_bits File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/tb_restador_4_bits.vhd Line: 4
+Info (12127): Elaborating entity "restador_4_bits" for the top level hierarchy
+Info (12128): Elaborating entity "restador_completo" for hierarchy "restador_completo:b2v_inst" File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 86
+Info (12128): Elaborating entity "D_FF" for hierarchy "D_FF:b2v_inst10" File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 102
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 33 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 18 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 13283 megabytes
+    Info: Processing ended: Tue Nov  5 22:23:48 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:42
 
 
