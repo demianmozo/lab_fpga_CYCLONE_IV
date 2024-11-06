@@ -1,0 +1,90 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+ENTITY tb_sec_de_luces IS
+END tb_sec_de_luces;
+
+ARCHITECTURE behavior OF tb_sec_de_luces IS
+
+    -- Component declaration for the Unit Under Test (UUT)
+    COMPONENT sec_de_luces
+    PORT(
+         reset : IN  STD_LOGIC;
+         clock : IN  STD_LOGIC;
+         x : IN  STD_LOGIC;
+         Z : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+        );
+    END COMPONENT;
+    
+    -- Signal declarations for testbench
+    SIGNAL reset : STD_LOGIC := '0';
+    SIGNAL clock : STD_LOGIC := '0';
+    SIGNAL x : STD_LOGIC := '0';
+    SIGNAL Z : STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+    -- Clock period (adjust as needed)
+    CONSTANT clock_period : time := 20 ns;
+
+BEGIN
+
+    -- Instantiate the Unit Under Test (UUT)
+    uut: sec_de_luces PORT MAP (
+          reset => reset,
+          clock => clock,
+          x => x,
+          Z => Z
+        );
+
+    -- Clock process definition
+    clock_process : PROCESS
+    BEGIN
+        clock <= '0';
+        WAIT FOR clock_period/2;
+        clock <= '1';
+        WAIT FOR clock_period/2;
+    END PROCESS;
+
+    -- Stimulus process
+    stim_proc: PROCESS
+    BEGIN	
+               -- Test 1: Apply reset
+        reset <= '1';
+        WAIT FOR clock_period * 2;  -- Wait for 2 clock cycles
+        reset <= '0';
+        WAIT FOR clock_period * 2;  -- Wait for 2 clock cycles after releasing reset
+
+        -- Test 2: x = 0 (Should transition to A1, Z = "0110")
+        x <= '0';
+        WAIT FOR clock_period * 2;  -- Wait for 2 clock cycles
+        assert (Z = "0110") report "Error: Expected Z = 0110, but got " & std_logic_vector(Z) severity error;
+
+        -- Test 3: x = 1 (Should transition to E, Z = "1111")
+        x <= '1';
+        WAIT FOR clock_period * 2;
+        assert (Z = "1111") report "Error: Expected Z = 1111, but got " & std_logic_vector(Z) severity error;
+
+        -- Test 4: x = 1 (Should transition to B3, Z = "1110")
+        x <= '1';
+        WAIT FOR clock_period * 2;
+        assert (Z = "1110") report "Error: Expected Z = 1110, but got " & std_logic_vector(Z) severity error;
+
+        -- Test 5: x = 0 (Should transition to A2, Z = "1001")
+        x <= '0';
+        WAIT FOR clock_period * 2;
+        assert (Z = "1001") report "Error: Expected Z = 1001, but got " & std_logic_vector(Z) severity error;
+
+        -- Test 6: Reset during the simulation
+        reset <= '1';
+        WAIT FOR clock_period * 2;
+        reset <= '0';
+        WAIT FOR clock_period * 2;
+        assert (Z = "0000") report "Error: Expected Z = 0000 after reset, but got " & std_logic_vector(Z) severity error;
+
+        -- End of the test
+        WAIT;
+    END PROCESS;
+
+END behavior;
+
+       

@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+d\\Mac\Home\Desktop\lab_fpga_CYCLONE_IV\PARTE_C\simulation\modelsim
+Esec_de_luces
+Z0 w1730864567
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 d\\Mac\Home\Desktop\lab_fpga_CYCLONE_IV\PARTE_D\simulation\modelsim
+Z4 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_D/sec_de_luces.vhd
+Z5 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_D/sec_de_luces.vhd
+l0
+L22
+VB^cXOdf]@>4;zd:OF1B5>1
+Z6 OV;C;10.1d;51
+32
+Z7 !s108 1730865535.693000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_D/sec_de_luces.vhd|
+Z9 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_D/sec_de_luces.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 W_jFCBTSmfmaBKi7Sk:m73
+!i10b 1
+Abehavior
+R1
+R2
+DEx4 work 12 sec_de_luces 0 22 B^cXOdf]@>4;zd:OF1B5>1
+l42
+L34
+VdHAE`>F<]E9@^P20hXb3_0
+!s100 Hd]hoVObK>SAQJSCDUenk3
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!i10b 1
+Etb_sec_de_luces
+Z12 w1730865463
+R1
+R2
+R3
+Z13 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_D/tb_sec_de_luces.vhd
+Z14 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_D/tb_sec_de_luces.vhd
+l0
+L4
+V8faZQFml8I9MNX5gP4kn?3
+!s100 n0RY71GfTmE?nAPMaM61R0
+R6
+32
+!i10b 1
+Z15 !s108 1730865535.787000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_D/tb_sec_de_luces.vhd|
+Z17 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_D/tb_sec_de_luces.vhd|
+R10
+R11
+Abehavior
+R1
+R2
+Z18 DEx4 work 15 tb_sec_de_luces 0 22 8faZQFml8I9MNX5gP4kn?3
+l33
+L7
+V77<?W`_nOh=27Fee8H>S30
+!s100 A>d`e_XDNX`]@Pnj>1O:H0
+R6
+32
+!i10b 1
+R15
+R16
+R17
+R10
+R11

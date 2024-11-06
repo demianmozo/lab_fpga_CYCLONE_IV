@@ -1,0 +1,17 @@
+onerror {exit -code 1}
+vlib work
+vcom -work work ej_d_template.vho
+vcom -work work Waveform.vwf.vht
+vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.sec_de_luces_template_vhd_vec_tst
+vcd file -direction ej_d_template.msim.vcd
+vcd add -internal sec_de_luces_template_vhd_vec_tst/*
+vcd add -internal sec_de_luces_template_vhd_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f

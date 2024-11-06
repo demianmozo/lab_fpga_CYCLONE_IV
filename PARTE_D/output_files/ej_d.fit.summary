@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Nov  6 01:04:59 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : ej_d
+Top-level Entity Name : sec_de_luces
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 11 / 22,320 ( < 1 % )
+    Total combinational functions : 11 / 22,320 ( < 1 % )
+    Dedicated logic registers : 7 / 22,320 ( < 1 % )
+Total registers : 7
+Total pins : 7 / 154 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

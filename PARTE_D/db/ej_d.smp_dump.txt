@@ -1,0 +1,10 @@
+
+State Machine - |sec_de_luces|fstate
+Name fstate.A2 fstate.B3 fstate.B2 fstate.B1 fstate.E fstate.A1 fstate.Idle 
+fstate.Idle 0 0 0 0 0 0 0 
+fstate.A1 0 0 0 0 0 1 1 
+fstate.E 0 0 0 0 1 0 1 
+fstate.B1 0 0 0 1 0 0 1 
+fstate.B2 0 0 1 0 0 0 1 
+fstate.B3 0 1 0 0 0 0 1 
+fstate.A2 1 0 0 0 0 0 1 

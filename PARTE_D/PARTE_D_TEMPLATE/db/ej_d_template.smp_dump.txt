@@ -1,0 +1,10 @@
+
+State Machine - |sec_de_luces_template|state
+Name state.B3 state.B2 state.B1 state.E state.A2 state.A1 state.Idle 
+state.Idle 0 0 0 0 0 0 0 
+state.A1 0 0 0 0 0 1 1 
+state.A2 0 0 0 0 1 0 1 
+state.E 0 0 0 1 0 0 1 
+state.B1 0 0 1 0 0 0 1 
+state.B2 0 1 0 0 0 0 1 
+state.B3 1 0 0 0 0 0 1 
