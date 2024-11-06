@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ej_b
-Wed Oct 23 23:24:25 2024
+Tue Nov  5 18:59:41 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 23 23:24:25 2024          ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov  5 18:59:41 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_b                                           ;
 ; Top-level Entity Name              ; restador_completo                              ;
@@ -267,7 +267,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Oct 23 23:24:06 2024
+    Info: Processing started: Tue Nov  5 18:59:22 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ej_b -c ej_b
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -291,7 +291,7 @@ Info (21057): Implemented 11 device resources after synthesis - the final resour
     Info (21061): Implemented 5 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 13282 megabytes
-    Info: Processing ended: Wed Oct 23 23:24:25 2024
+    Info: Processing ended: Tue Nov  5 18:59:41 2024
     Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:42
 

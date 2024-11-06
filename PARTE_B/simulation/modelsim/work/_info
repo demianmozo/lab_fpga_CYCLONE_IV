@@ -33,7 +33,7 @@ L6
 Vecg`f4LjPJ@eY:O9j@XhY3
 Z11 OV;C;10.1d;51
 32
-Z12 !s108 1729737809.870000
+Z12 !s108 1730843186.363000
 Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/FF_D.vhd|
 Z14 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/FF_D.vhd|
 Z15 o-work work -2002 -explicit -O0
@@ -76,7 +76,7 @@ VD9FDEXa[OFPLPD:?oXQDg1
 R11
 32
 !i10b 1
-Z24 !s108 1729737810.134000
+Z24 !s108 1730843186.659000
 Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/simulation/qsim/ej_b.vho|
 Z26 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/simulation/qsim/ej_b.vho|
 R15
@@ -157,7 +157,7 @@ L15
 Vf553df>OJj4nH3P`RZPh32
 R11
 32
-!s108 1729737809.962000
+!s108 1730843186.487000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/restador_completo.vhd|
 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/restador_completo.vhd|
 R15
@@ -179,7 +179,7 @@ L4
 VABU37c1_WIEgzCE6iheZ90
 R11
 32
-Z38 !s108 1729737810.041000
+Z38 !s108 1730843186.581000
 Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/tb_restador_completo.vhd|
 Z40 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_B/tb_restador_completo.vhd|
 R15
@@ -193,7 +193,6 @@ DEx4 work 20 tb_restador_completo 0 22 ABU37c1_WIEgzCE6iheZ90
 l29
 L7
 VfK0c=k^aJkEL`MKmo]MAQ2
-!s100 c90ePS]c25o<dBinkoQ=Q0
 R11
 32
 R38
@@ -201,4 +200,5 @@ R39
 R40
 R15
 R16
+!s100 c90ePS]c25o<dBinkoQ=Q0
 !i10b 1

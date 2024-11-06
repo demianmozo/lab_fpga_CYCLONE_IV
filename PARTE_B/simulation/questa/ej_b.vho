@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
--- DATE "10/23/2024 23:24:42"
+-- DATE "11/05/2024 18:59:59"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -89,12 +89,12 @@ ENTITY 	restador_completo IS
 END restador_completo;
 
 -- Design Ports Information
--- o_R	=>  Location: PIN_K1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_B_out	=>  Location: PIN_K2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- clk	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- in_a	=>  Location: PIN_L1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- in_b	=>  Location: PIN_L3,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- in_B_in	=>  Location: PIN_L2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_R	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_B_out	=>  Location: PIN_A15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- clk	=>  Location: PIN_R8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- in_a	=>  Location: PIN_M1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- in_b	=>  Location: PIN_T8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- in_B_in	=>  Location: PIN_B9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF restador_completo IS
@@ -158,7 +158,7 @@ PORT MAP (
 	devclrn => ww_devclrn,
 	devpor => ww_devpor);
 
--- Location: IOOBUF_X0_Y12_N9
+-- Location: IOOBUF_X49_Y34_N2
 \o_R~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -170,7 +170,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_R~output_o\);
 
--- Location: IOOBUF_X0_Y12_N2
+-- Location: IOOBUF_X38_Y34_N16
 \o_B_out~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -182,7 +182,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_B_out~output_o\);
 
--- Location: IOIBUF_X0_Y16_N8
+-- Location: IOIBUF_X27_Y0_N22
 \clk~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -193,7 +193,7 @@ PORT MAP (
 	i => ww_clk,
 	o => \clk~input_o\);
 
--- Location: CLKCTRL_G2
+-- Location: CLKCTRL_G18
 \clk~inputclkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
 GENERIC MAP (
@@ -206,7 +206,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \clk~inputclkctrl_outclk\);
 
--- Location: IOIBUF_X0_Y11_N8
+-- Location: IOIBUF_X0_Y16_N22
 \in_a~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -217,7 +217,7 @@ PORT MAP (
 	i => ww_in_a,
 	o => \in_a~input_o\);
 
--- Location: LCCOMB_X1_Y11_N4
+-- Location: LCCOMB_X26_Y30_N4
 \D1|Q~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \D1|Q~feeder_combout\ = \in_a~input_o\
@@ -231,7 +231,7 @@ PORT MAP (
 	datad => \in_a~input_o\,
 	combout => \D1|Q~feeder_combout\);
 
--- Location: FF_X1_Y11_N5
+-- Location: FF_X26_Y30_N5
 \D1|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -245,7 +245,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \D1|Q~q\);
 
--- Location: IOIBUF_X0_Y10_N22
+-- Location: IOIBUF_X27_Y0_N15
 \in_b~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -256,7 +256,7 @@ PORT MAP (
 	i => ww_in_b,
 	o => \in_b~input_o\);
 
--- Location: LCCOMB_X1_Y11_N30
+-- Location: LCCOMB_X26_Y30_N30
 \D2|Q~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \D2|Q~feeder_combout\ = \in_b~input_o\
@@ -270,7 +270,7 @@ PORT MAP (
 	datad => \in_b~input_o\,
 	combout => \D2|Q~feeder_combout\);
 
--- Location: FF_X1_Y11_N31
+-- Location: FF_X26_Y30_N31
 \D2|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -284,7 +284,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \D2|Q~q\);
 
--- Location: IOIBUF_X0_Y11_N1
+-- Location: IOIBUF_X25_Y34_N8
 \in_B_in~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -295,7 +295,7 @@ PORT MAP (
 	i => ww_in_B_in,
 	o => \in_B_in~input_o\);
 
--- Location: LCCOMB_X1_Y11_N16
+-- Location: LCCOMB_X26_Y30_N16
 \D3|Q~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \D3|Q~feeder_combout\ = \in_B_in~input_o\
@@ -309,7 +309,7 @@ PORT MAP (
 	datad => \in_B_in~input_o\,
 	combout => \D3|Q~feeder_combout\);
 
--- Location: FF_X1_Y11_N17
+-- Location: FF_X26_Y30_N17
 \D3|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -323,7 +323,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \D3|Q~q\);
 
--- Location: LCCOMB_X1_Y11_N0
+-- Location: LCCOMB_X26_Y30_N12
 \R~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \R~0_combout\ = \D1|Q~q\ $ (\D2|Q~q\ $ (\D3|Q~q\))
@@ -339,7 +339,7 @@ PORT MAP (
 	datad => \D3|Q~q\,
 	combout => \R~0_combout\);
 
--- Location: FF_X1_Y11_N1
+-- Location: FF_X26_Y30_N13
 \D5|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -353,7 +353,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \D5|Q~q\);
 
--- Location: LCCOMB_X1_Y11_N2
+-- Location: LCCOMB_X26_Y30_N2
 \B_out~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \B_out~0_combout\ = (\D2|Q~q\ & ((\D3|Q~q\) # (!\D1|Q~q\))) # (!\D2|Q~q\ & (!\D1|Q~q\ & \D3|Q~q\))
@@ -369,7 +369,7 @@ PORT MAP (
 	datad => \D3|Q~q\,
 	combout => \B_out~0_combout\);
 
--- Location: FF_X1_Y11_N3
+-- Location: FF_X26_Y30_N3
 \D4|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (

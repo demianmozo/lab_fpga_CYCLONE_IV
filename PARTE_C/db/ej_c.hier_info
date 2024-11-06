@@ -1,0 +1,164 @@
+|restador_4_bits
+R3 <= D_FF:inst12.Q
+A3 => D_FF:inst4.D
+CLOCK => D_FF:inst4.CLOCK
+CLOCK => D_FF:inst5.CLOCK
+CLOCK => D_FF:inst12.CLOCK
+CLOCK => D_FF:inst6.CLOCK
+CLOCK => D_FF:inst7.CLOCK
+CLOCK => D_FF:inst13.CLOCK
+CLOCK => D_FF:inst8.CLOCK
+CLOCK => D_FF:inst9.CLOCK
+CLOCK => D_FF:inst14.CLOCK
+CLOCK => D_FF:inst10.CLOCK
+CLOCK => D_FF:inst11.CLOCK
+CLOCK => D_FF:inst15.CLOCK
+CLOCK => D_FF:inst16.CLOCK
+B3 => D_FF:inst5.D
+B_in => restador_completo:inst.B_in
+R2 <= D_FF:inst13.Q
+A2 => D_FF:inst6.D
+B2 => D_FF:inst7.D
+R1 <= D_FF:inst14.Q
+A1 => D_FF:inst8.D
+B1 => D_FF:inst9.D
+R0 <= D_FF:inst15.Q
+A0 => D_FF:inst10.D
+B0 => D_FF:inst11.D
+B_out <= D_FF:inst16.Q
+
+
+|restador_4_bits|D_FF:inst12
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|restador_completo:inst
+a => R.IN0
+a => B_out.IN0
+a => B_out.IN0
+b => R.IN1
+b => B_out.IN1
+b => B_out.IN0
+B_in => R.IN1
+B_in => B_out.IN1
+B_in => B_out.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+B_out <= B_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst4
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst5
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst13
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|restador_completo:inst1
+a => R.IN0
+a => B_out.IN0
+a => B_out.IN0
+b => R.IN1
+b => B_out.IN1
+b => B_out.IN0
+B_in => R.IN1
+B_in => B_out.IN1
+B_in => B_out.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+B_out <= B_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst6
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst7
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst14
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|restador_completo:inst2
+a => R.IN0
+a => B_out.IN0
+a => B_out.IN0
+b => R.IN1
+b => B_out.IN1
+b => B_out.IN0
+B_in => R.IN1
+B_in => B_out.IN1
+B_in => B_out.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+B_out <= B_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst8
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst9
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst15
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|restador_completo:inst3
+a => R.IN0
+a => B_out.IN0
+a => B_out.IN0
+b => R.IN1
+b => B_out.IN1
+b => B_out.IN0
+B_in => R.IN1
+B_in => B_out.IN1
+B_in => B_out.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+B_out <= B_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst10
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst11
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4_bits|D_FF:inst16
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
