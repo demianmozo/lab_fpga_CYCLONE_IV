@@ -15,7 +15,7 @@
 
 -- PROGRAM		"Quartus Prime"
 -- VERSION		"Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
--- CREATED		"Tue Nov  5 21:45:37 2024"
+-- CREATED		"Wed Nov  6 17:08:21 2024"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -27,19 +27,19 @@ ENTITY restador_4_bits IS
 	(
 		B_in :  IN  STD_LOGIC;
 		CLOCK :  IN  STD_LOGIC;
-		A3 :  IN  STD_LOGIC;
-		A2 :  IN  STD_LOGIC;
-		A1 :  IN  STD_LOGIC;
 		A0 :  IN  STD_LOGIC;
-		B3 :  IN  STD_LOGIC;
-		B2 :  IN  STD_LOGIC;
-		B1 :  IN  STD_LOGIC;
 		B0 :  IN  STD_LOGIC;
-		R3 :  OUT  STD_LOGIC;
-		R2 :  OUT  STD_LOGIC;
-		R1 :  OUT  STD_LOGIC;
+		A1 :  IN  STD_LOGIC;
+		B1 :  IN  STD_LOGIC;
+		A2 :  IN  STD_LOGIC;
+		B2 :  IN  STD_LOGIC;
+		A3 :  IN  STD_LOGIC;
+		B3 :  IN  STD_LOGIC;
+		B_out :  OUT  STD_LOGIC;
 		R0 :  OUT  STD_LOGIC;
-		B_out :  OUT  STD_LOGIC
+		R1 :  OUT  STD_LOGIC;
+		R2 :  OUT  STD_LOGIC;
+		R3 :  OUT  STD_LOGIC
 	);
 END restador_4_bits;
 
@@ -100,13 +100,13 @@ PORT MAP(a => SYNTHESIZED_WIRE_2,
 
 
 b2v_inst10 : d_ff
-PORT MAP(D => A0,
+PORT MAP(D => A3,
 		 CLOCK => CLOCK,
 		 Q => SYNTHESIZED_WIRE_13);
 
 
 b2v_inst11 : d_ff
-PORT MAP(D => B0,
+PORT MAP(D => B3,
 		 CLOCK => CLOCK,
 		 Q => SYNTHESIZED_WIRE_14);
 
@@ -114,25 +114,25 @@ PORT MAP(D => B0,
 b2v_inst12 : d_ff
 PORT MAP(D => SYNTHESIZED_WIRE_5,
 		 CLOCK => CLOCK,
-		 Q => R3);
+		 Q => R0);
 
 
 b2v_inst13 : d_ff
 PORT MAP(D => SYNTHESIZED_WIRE_6,
 		 CLOCK => CLOCK,
-		 Q => R2);
+		 Q => R1);
 
 
 b2v_inst14 : d_ff
 PORT MAP(D => SYNTHESIZED_WIRE_7,
 		 CLOCK => CLOCK,
-		 Q => R1);
+		 Q => R2);
 
 
 b2v_inst15 : d_ff
 PORT MAP(D => SYNTHESIZED_WIRE_8,
 		 CLOCK => CLOCK,
-		 Q => R0);
+		 Q => R3);
 
 
 b2v_inst16 : d_ff
@@ -158,37 +158,37 @@ PORT MAP(a => SYNTHESIZED_WIRE_13,
 
 
 b2v_inst4 : d_ff
-PORT MAP(D => A3,
+PORT MAP(D => A0,
 		 CLOCK => CLOCK,
 		 Q => SYNTHESIZED_WIRE_0);
 
 
 b2v_inst5 : d_ff
-PORT MAP(D => B3,
+PORT MAP(D => B0,
 		 CLOCK => CLOCK,
 		 Q => SYNTHESIZED_WIRE_1);
 
 
 b2v_inst6 : d_ff
-PORT MAP(D => A2,
+PORT MAP(D => A1,
 		 CLOCK => CLOCK,
 		 Q => SYNTHESIZED_WIRE_2);
 
 
 b2v_inst7 : d_ff
-PORT MAP(D => B2,
+PORT MAP(D => B1,
 		 CLOCK => CLOCK,
 		 Q => SYNTHESIZED_WIRE_3);
 
 
 b2v_inst8 : d_ff
-PORT MAP(D => A1,
+PORT MAP(D => A2,
 		 CLOCK => CLOCK,
 		 Q => SYNTHESIZED_WIRE_10);
 
 
 b2v_inst9 : d_ff
-PORT MAP(D => B1,
+PORT MAP(D => B2,
 		 CLOCK => CLOCK,
 		 Q => SYNTHESIZED_WIRE_11);
 

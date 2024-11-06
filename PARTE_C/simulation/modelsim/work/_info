@@ -17,7 +17,7 @@ L6
 Vecg`f4LjPJ@eY:O9j@XhY3
 Z8 OV;C;10.1d;51
 32
-Z9 !s108 1730856290.042000
+Z9 !s108 1730926801.116000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd|
 Z11 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd|
 Z12 o-work work -2002 -explicit -O0
@@ -43,7 +43,7 @@ R13
 !s100 [UPoXW688NTg=Y`<6;RoZ2
 !i10b 1
 Erestador_4_bits
-Z14 w1730853937
+Z14 w1730923702
 R3
 R4
 R5
@@ -51,23 +51,23 @@ Z15 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd
 Z16 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd
 l0
 L25
-VHZ6YkjidJ`bP5154_1?D71
+V]9^4a>;;N2]LmHIBP149Y0
 R8
 32
-Z17 !s108 1730856290.150000
+Z17 !s108 1730926801.227000
 Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd|
 Z19 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd|
 R12
 R13
-!s100 ?e86`dA92z]>[@mS_TGCj0
+!s100 lIQSC6=ml7>E59foPE;4Z2
 !i10b 1
 Abdf_type
 R3
 R4
-DEx4 work 15 restador_4_bits 0 22 HZ6YkjidJ`bP5154_1?D71
+DEx4 work 15 restador_4_bits 0 22 ]9^4a>;;N2]LmHIBP149Y0
 l82
 L46
-VQ]g;f44Ybmz9SH[WgiJ`:2
+VPf4[V?EX3A80^5aLdzD_]0
 R8
 32
 R17
@@ -75,7 +75,7 @@ R18
 R19
 R12
 R13
-!s100 ob_V2l>BkY43MRWbgdAIK3
+!s100 Zf0>6hbMCe0RIJ`S<ocCj1
 !i10b 1
 Erestador_completo
 Z20 w1730844910
@@ -89,7 +89,7 @@ L4
 V5P_3JdUgQ1MHkj?g4El6a3
 R8
 32
-Z23 !s108 1730856290.245000
+Z23 !s108 1730926801.319000
 Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_completo.vhd|
 Z25 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_completo.vhd|
 R12
@@ -126,7 +126,7 @@ Vd=7zREW]cR;Jmo@eg?Gao1
 R8
 32
 !i10b 1
-Z29 !s108 1730856290.322000
+Z29 !s108 1730926801.397000
 Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/tb_restador_4_bits.vhd|
 Z31 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/tb_restador_4_bits.vhd|
 R12
@@ -137,8 +137,8 @@ R4
 Z32 DEx4 work 18 tb_restador_4_bits 0 22 d=7zREW]cR;Jmo@eg?Gao1
 l32
 L7
-VS`fc7Ije4]06EMcfR90G33
-!s100 `hDTXHT<P9CghnoA5iW[n2
+Z33 VS`fc7Ije4]06EMcfR90G33
+Z34 !s100 `hDTXHT<P9CghnoA5iW[n2
 R8
 32
 !i10b 1

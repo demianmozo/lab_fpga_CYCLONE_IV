@@ -13,19 +13,19 @@ CLOCK => d_ff:b2v_inst6.CLOCK
 CLOCK => d_ff:b2v_inst7.CLOCK
 CLOCK => d_ff:b2v_inst8.CLOCK
 CLOCK => d_ff:b2v_inst9.CLOCK
-A3 => d_ff:b2v_inst4.D
-A2 => d_ff:b2v_inst6.D
-A1 => d_ff:b2v_inst8.D
-A0 => d_ff:b2v_inst10.D
-B3 => d_ff:b2v_inst5.D
-B2 => d_ff:b2v_inst7.D
-B1 => d_ff:b2v_inst9.D
-B0 => d_ff:b2v_inst11.D
-R3 << d_ff:b2v_inst12.Q
-R2 << d_ff:b2v_inst13.Q
-R1 << d_ff:b2v_inst14.Q
-R0 << d_ff:b2v_inst15.Q
-B_out << d_ff:b2v_inst16.Q
+A0 => d_ff:b2v_inst4.D
+B0 => d_ff:b2v_inst5.D
+A1 => d_ff:b2v_inst6.D
+B1 => d_ff:b2v_inst7.D
+A2 => d_ff:b2v_inst8.D
+B2 => d_ff:b2v_inst9.D
+A3 => d_ff:b2v_inst10.D
+B3 => d_ff:b2v_inst11.D
+B_out <= d_ff:b2v_inst16.Q
+R0 <= d_ff:b2v_inst12.Q
+R1 <= d_ff:b2v_inst13.Q
+R2 <= d_ff:b2v_inst14.Q
+R3 <= d_ff:b2v_inst15.Q
 
 
 |restador_4_bits|restador_completo:b2v_inst

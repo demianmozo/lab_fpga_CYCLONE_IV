@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ej_c
-Tue Nov  5 22:23:48 2024
+Wed Nov  6 17:08:59 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov  5 22:23:48 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov  6 17:08:59 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_c                                           ;
 ; Top-level Entity Name              ; restador_4_bits                                ;
@@ -168,9 +168,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; restador_4_bits.vhd              ; yes             ; User VHDL File  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd   ;         ;
-; restador_completo.vhd            ; yes             ; User VHDL File  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_completo.vhd ;         ;
-; D_FF.vhd                         ; yes             ; User VHDL File  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd              ;         ;
+; restador_4_bits.vhd              ; yes             ; User VHDL File  ; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd   ;         ;
+; restador_completo.vhd            ; yes             ; User VHDL File  ; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_completo.vhd ;         ;
+; D_FF.vhd                         ; yes             ; User VHDL File  ; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd              ;         ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
 
 
@@ -282,25 +282,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Nov  5 22:23:29 2024
+    Info: Processing started: Wed Nov  6 17:08:41 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ej_c -c ej_c
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file restador_4_bits.vhd
-    Info (12022): Found design unit 1: restador_4_bits-bdf_type File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 46
-    Info (12023): Found entity 1: restador_4_bits File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 25
+    Info (12022): Found design unit 1: restador_4_bits-bdf_type File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 46
+    Info (12023): Found entity 1: restador_4_bits File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file restador_completo.vhd
-    Info (12022): Found design unit 1: restador_completo-behavioral File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_completo.vhd Line: 14
-    Info (12023): Found entity 1: restador_completo File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_completo.vhd Line: 4
+    Info (12022): Found design unit 1: restador_completo-behavioral File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_completo.vhd Line: 14
+    Info (12023): Found entity 1: restador_completo File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_completo.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file d_ff.vhd
-    Info (12022): Found design unit 1: D_FF-behavioral File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd Line: 14
-    Info (12023): Found entity 1: D_FF File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd Line: 6
+    Info (12022): Found design unit 1: D_FF-behavioral File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd Line: 14
+    Info (12023): Found entity 1: D_FF File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/D_FF.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file tb_restador_4_bits.vhd
-    Info (12022): Found design unit 1: tb_restador_4_bits-behavior File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/tb_restador_4_bits.vhd Line: 7
-    Info (12023): Found entity 1: tb_restador_4_bits File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/tb_restador_4_bits.vhd Line: 4
+    Info (12022): Found design unit 1: tb_restador_4_bits-behavior File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/tb_restador_4_bits.vhd Line: 7
+    Info (12023): Found entity 1: tb_restador_4_bits File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/tb_restador_4_bits.vhd Line: 4
 Info (12127): Elaborating entity "restador_4_bits" for the top level hierarchy
-Info (12128): Elaborating entity "restador_completo" for hierarchy "restador_completo:b2v_inst" File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 86
-Info (12128): Elaborating entity "D_FF" for hierarchy "D_FF:b2v_inst10" File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 102
+Info (12128): Elaborating entity "restador_completo" for hierarchy "restador_completo:b2v_inst" File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 86
+Info (12128): Elaborating entity "D_FF" for hierarchy "D_FF:b2v_inst10" File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_C/restador_4_bits.vhd Line: 102
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -309,9 +309,9 @@ Info (21057): Implemented 33 device resources after synthesis - the final resour
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 18 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 13283 megabytes
-    Info: Processing ended: Tue Nov  5 22:23:48 2024
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 13287 megabytes
+    Info: Processing ended: Wed Nov  6 17:08:59 2024
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:41
 
 
