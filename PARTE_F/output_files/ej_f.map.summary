@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Nov  7 02:10:35 2024
+Analysis & Synthesis Status : Failed - Thu Nov  7 19:03:41 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : ej_f
 Top-level Entity Name : division
 Family : Cyclone IV E
-Total logic elements : 1,153
-    Total combinational functions : 1,153
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 22
-Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total logic elements : N/A until Partition Merge
+    Total combinational functions : N/A until Partition Merge
+    Dedicated logic registers : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total memory bits : N/A until Partition Merge
+Embedded Multiplier 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge

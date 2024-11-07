@@ -23,8 +23,8 @@ begin
     procedimiento: process(input_a, input_b) is
     begin
         -- Convertimos 'a' y 'b' a enteros multiplicados por 1000 para manejar la coma decimal NO FUNCIONAAAAA 
-    a_convertido <= to_integer(unsigned(input_a)) * 1000;  -- Multiplicamos 'a' por 1000
-    b_convertido <= to_integer(unsigned(input_b)) * 1000;  -- Multiplicamos 'b' por 1000
+    a_convertido <= to_natural(unsigned(input_a)) * 1000;  -- Multiplicamos 'a' por 1000
+    b_convertido <= to_natural(unsigned(input_b)) * 1000;  -- Multiplicamos 'b' por 1000
 
     if b_convertido /= 0 then
         cociente <= a_convertido / b_convertido;  -- Realizamos la división
@@ -32,7 +32,6 @@ begin
         cociente <= 0;  -- Valor predeterminado para división por 0
     end if;
 
-    -- Restauramos la coma decimal dividiendo por 1000 para obtener el resultado correcto NO SE SI ES ESTO, NO ANDA CORRER LA COMA
     output_c <= std_logic_vector(to_unsigned(cociente, output_c'length));
 
     end process procedimiento;
