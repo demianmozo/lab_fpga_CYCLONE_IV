@@ -69,7 +69,7 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME uut -section_id tb_restador
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "250 ns" -section_id tb_restador_4_bits
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_restador_4_bits -section_id tb_restador_4_bits
 set_global_assignment -name EDA_TEST_BENCH_FILE tb_restador_4_bits.vhd -section_id tb_restador_4_bits
-set_global_assignment -name VHDL_FILE restador_4_bits.vhd
+set_global_assignment -name BDF_FILE restador_4_bits.bdf
 set_global_assignment -name VHDL_FILE restador_completo.vhd
 set_global_assignment -name VHDL_FILE D_FF.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf

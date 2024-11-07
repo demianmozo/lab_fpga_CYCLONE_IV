@@ -24,6 +24,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "Zero",
+					"strict" : false
+				},
+				{
+					"name" : "IN6",
+					"strict" : false
+				},
+				{
 					"name" : "B_in",
 					"strict" : false
 				},
