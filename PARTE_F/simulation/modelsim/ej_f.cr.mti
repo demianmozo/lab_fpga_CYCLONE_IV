@@ -5,7 +5,7 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Compiling entity division
--- Compiling architecture behavioral of division
+-- Compiling architecture division of division
 
 } {} {}} //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd {1 {vcom -work work -2002 -explicit //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -14,6 +14,6 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Compiling entity tb_division
--- Compiling architecture behavior of tb_division
+-- Compiling architecture sim of tb_division
 
 } {} {}}

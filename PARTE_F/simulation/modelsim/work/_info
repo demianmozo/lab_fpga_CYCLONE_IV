@@ -2,9 +2,9 @@ m255
 K3
 13
 cModel Technology
-d\\Mac\Home\Desktop\lab_fpga_CYCLONE_IV\PARTE_E\simulation\modelsim
+dC:\altera\13.0sp1
 Edivision
-Z0 w1730955749
+Z0 w1731022552
 Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -13,24 +13,24 @@ Z5 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd
 Z6 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd
 l0
 L6
-VDe>E?DMH:h4JKWgkT2TVM2
+VPU`:fm71:0zPU^4o6DCE[1
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1730956110.248000
+Z8 !s108 1731023054.659000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd|
 Z10 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd|
 Z11 o-work work -2002 -explicit -O0
 Z12 tExplicit 1
-!s100 FbRoXJQ3NT?lC13zdlkzh1
+!s100 `:S?4]79gZ9]b`VZd`PZ`3
 !i10b 1
-Abehavioral
+Adivision
 R1
 R2
 R3
-DEx4 work 8 division 0 22 De>E?DMH:h4JKWgkT2TVM2
-l21
+DEx4 work 8 division 0 22 PU`:fm71:0zPU^4o6DCE[1
+l18
 L14
-V3STM`aX7cEMW=UN8N4GQY2
+V3GIf>@^V]ALQ[Od<WogQ`2
 R7
 32
 R8
@@ -38,10 +38,10 @@ R9
 R10
 R11
 R12
-!s100 1e[R7W3Gmm>7omcKcP@=@1
+!s100 Qn3B]mBo>?mUjhJJ92FL<1
 !i10b 1
 Etb_division
-Z13 w1730955197
+Z13 w1731022825
 R1
 R2
 R3
@@ -49,26 +49,26 @@ R4
 Z14 8//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd
 Z15 F//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd
 l0
-L6
+L5
 V`F=FO1Q1je;Y^J9f_1flQ0
-!s100 `W1:=Yn]@K5MY;eM8WaFA3
+!s100 :X_Gg]eJ>`=VX5RbZdNf00
 R7
 32
 !i10b 1
-Z16 !s108 1730956110.342000
+Z16 !s108 1731023054.752000
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd|
 Z18 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd|
 R11
 R12
-Abehavior
+Asim
 R1
 R2
 R3
 DEx4 work 11 tb_division 0 22 `F=FO1Q1je;Y^J9f_1flQ0
-l26
-L10
-VUMh`oP:W?g^ScgGnc_6_e1
-!s100 ^Gg;>iod7R0>L?R9hAD7i0
+l25
+L9
+VLGInalmCBi4E1;4UcnoiN2
+!s100 k9bP6fkNO1O5zR8IHn4Im1
 R7
 32
 !i10b 1

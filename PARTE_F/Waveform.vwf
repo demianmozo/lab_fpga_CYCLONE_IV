@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_f -c ej_f --vector_source="//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/Waveform.vwf" --testbench_file="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_f -c ej_f --vector_source="//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/Waveform.vwf" --testbench_file="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/" ej_f -c ej_f</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/" ej_f -c ej_f</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_f -c ej_f --vector_source="//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/Waveform.vwf" --testbench_file="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_f -c ej_f --vector_source="//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/Waveform.vwf" --testbench_file="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/" ej_f -c ej_f</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/" ej_f -c ej_f</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work ej_f.vho
@@ -20,6 +20,9 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +41,9 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -76,7 +82,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("input_a")
+SIGNAL("a")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -86,67 +92,67 @@ SIGNAL("input_a")
 	PARENT = "";
 }
 
-SIGNAL("input_a[5]")
+SIGNAL("a[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_a";
+	PARENT = "a";
 }
 
-SIGNAL("input_a[4]")
+SIGNAL("a[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_a";
+	PARENT = "a";
 }
 
-SIGNAL("input_a[3]")
+SIGNAL("a[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_a";
+	PARENT = "a";
 }
 
-SIGNAL("input_a[2]")
+SIGNAL("a[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_a";
+	PARENT = "a";
 }
 
-SIGNAL("input_a[1]")
+SIGNAL("a[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_a";
+	PARENT = "a";
 }
 
-SIGNAL("input_a[0]")
+SIGNAL("a[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_a";
+	PARENT = "a";
 }
 
-SIGNAL("input_b")
+SIGNAL("b")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -156,67 +162,67 @@ SIGNAL("input_b")
 	PARENT = "";
 }
 
-SIGNAL("input_b[5]")
+SIGNAL("b[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_b";
+	PARENT = "b";
 }
 
-SIGNAL("input_b[4]")
+SIGNAL("b[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_b";
+	PARENT = "b";
 }
 
-SIGNAL("input_b[3]")
+SIGNAL("b[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_b";
+	PARENT = "b";
 }
 
-SIGNAL("input_b[2]")
+SIGNAL("b[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_b";
+	PARENT = "b";
 }
 
-SIGNAL("input_b[1]")
+SIGNAL("b[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_b";
+	PARENT = "b";
 }
 
-SIGNAL("input_b[0]")
+SIGNAL("b[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "input_b";
+	PARENT = "b";
 }
 
-SIGNAL("output_c")
+SIGNAL("cociente")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -226,134 +232,107 @@ SIGNAL("output_c")
 	PARENT = "";
 }
 
-SIGNAL("output_c[9]")
+SIGNAL("cociente[9]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "output_c";
+	PARENT = "cociente";
 }
 
-SIGNAL("output_c[8]")
+SIGNAL("cociente[8]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "output_c";
+	PARENT = "cociente";
 }
 
-SIGNAL("output_c[7]")
+SIGNAL("cociente[7]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "output_c";
+	PARENT = "cociente";
 }
 
-SIGNAL("output_c[6]")
+SIGNAL("cociente[6]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "output_c";
+	PARENT = "cociente";
 }
 
-SIGNAL("output_c[5]")
+SIGNAL("cociente[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "output_c";
+	PARENT = "cociente";
 }
 
-SIGNAL("output_c[4]")
+SIGNAL("cociente[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "output_c";
+	PARENT = "cociente";
 }
 
-SIGNAL("output_c[3]")
+SIGNAL("cociente[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "output_c";
+	PARENT = "cociente";
 }
 
-SIGNAL("output_c[2]")
+SIGNAL("cociente[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "output_c";
+	PARENT = "cociente";
 }
 
-SIGNAL("output_c[1]")
+SIGNAL("cociente[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "output_c";
+	PARENT = "cociente";
 }
 
-SIGNAL("output_c[0]")
+SIGNAL("cociente[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "output_c";
+	PARENT = "cociente";
 }
 
-TRANSITION_LIST("input_a[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("input_a[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("input_a[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("input_a[2]")
+TRANSITION_LIST("a[5]")
 {
 	NODE
 	{
@@ -362,7 +341,7 @@ TRANSITION_LIST("input_a[2]")
 	}
 }
 
-TRANSITION_LIST("input_a[1]")
+TRANSITION_LIST("a[4]")
 {
 	NODE
 	{
@@ -371,7 +350,7 @@ TRANSITION_LIST("input_a[1]")
 	}
 }
 
-TRANSITION_LIST("input_a[0]")
+TRANSITION_LIST("a[3]")
 {
 	NODE
 	{
@@ -380,7 +359,7 @@ TRANSITION_LIST("input_a[0]")
 	}
 }
 
-TRANSITION_LIST("input_b[5]")
+TRANSITION_LIST("a[2]")
 {
 	NODE
 	{
@@ -389,25 +368,7 @@ TRANSITION_LIST("input_b[5]")
 	}
 }
 
-TRANSITION_LIST("input_b[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("input_b[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("input_b[2]")
+TRANSITION_LIST("a[1]")
 {
 	NODE
 	{
@@ -416,7 +377,7 @@ TRANSITION_LIST("input_b[2]")
 	}
 }
 
-TRANSITION_LIST("input_b[1]")
+TRANSITION_LIST("a[0]")
 {
 	NODE
 	{
@@ -425,7 +386,16 @@ TRANSITION_LIST("input_b[1]")
 	}
 }
 
-TRANSITION_LIST("input_b[0]")
+TRANSITION_LIST("b[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("b[4]")
 {
 	NODE
 	{
@@ -434,7 +404,43 @@ TRANSITION_LIST("input_b[0]")
 	}
 }
 
-TRANSITION_LIST("output_c[9]")
+TRANSITION_LIST("b[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("b[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("b[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("b[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("cociente[9]")
 {
 	NODE
 	{
@@ -443,7 +449,7 @@ TRANSITION_LIST("output_c[9]")
 	}
 }
 
-TRANSITION_LIST("output_c[8]")
+TRANSITION_LIST("cociente[8]")
 {
 	NODE
 	{
@@ -452,7 +458,7 @@ TRANSITION_LIST("output_c[8]")
 	}
 }
 
-TRANSITION_LIST("output_c[7]")
+TRANSITION_LIST("cociente[7]")
 {
 	NODE
 	{
@@ -461,7 +467,7 @@ TRANSITION_LIST("output_c[7]")
 	}
 }
 
-TRANSITION_LIST("output_c[6]")
+TRANSITION_LIST("cociente[6]")
 {
 	NODE
 	{
@@ -470,7 +476,7 @@ TRANSITION_LIST("output_c[6]")
 	}
 }
 
-TRANSITION_LIST("output_c[5]")
+TRANSITION_LIST("cociente[5]")
 {
 	NODE
 	{
@@ -479,7 +485,7 @@ TRANSITION_LIST("output_c[5]")
 	}
 }
 
-TRANSITION_LIST("output_c[4]")
+TRANSITION_LIST("cociente[4]")
 {
 	NODE
 	{
@@ -488,7 +494,7 @@ TRANSITION_LIST("output_c[4]")
 	}
 }
 
-TRANSITION_LIST("output_c[3]")
+TRANSITION_LIST("cociente[3]")
 {
 	NODE
 	{
@@ -497,7 +503,7 @@ TRANSITION_LIST("output_c[3]")
 	}
 }
 
-TRANSITION_LIST("output_c[2]")
+TRANSITION_LIST("cociente[2]")
 {
 	NODE
 	{
@@ -506,7 +512,7 @@ TRANSITION_LIST("output_c[2]")
 	}
 }
 
-TRANSITION_LIST("output_c[1]")
+TRANSITION_LIST("cociente[1]")
 {
 	NODE
 	{
@@ -515,7 +521,7 @@ TRANSITION_LIST("output_c[1]")
 	}
 }
 
-TRANSITION_LIST("output_c[0]")
+TRANSITION_LIST("cociente[0]")
 {
 	NODE
 	{
@@ -526,7 +532,7 @@ TRANSITION_LIST("output_c[0]")
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_a";
+	CHANNEL = "a";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -536,7 +542,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_a[5]";
+	CHANNEL = "a[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -546,7 +552,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_a[4]";
+	CHANNEL = "a[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -556,7 +562,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_a[3]";
+	CHANNEL = "a[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -566,7 +572,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_a[2]";
+	CHANNEL = "a[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -576,7 +582,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_a[1]";
+	CHANNEL = "a[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
@@ -586,7 +592,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_a[0]";
+	CHANNEL = "a[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
@@ -596,7 +602,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_b";
+	CHANNEL = "b";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
@@ -606,7 +612,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_b[5]";
+	CHANNEL = "b[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
@@ -616,7 +622,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_b[4]";
+	CHANNEL = "b[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 9;
@@ -626,7 +632,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_b[3]";
+	CHANNEL = "b[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 10;
@@ -636,7 +642,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_b[2]";
+	CHANNEL = "b[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 11;
@@ -646,7 +652,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_b[1]";
+	CHANNEL = "b[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 12;
@@ -656,7 +662,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input_b[0]";
+	CHANNEL = "b[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 13;
@@ -666,7 +672,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c";
+	CHANNEL = "cociente";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 14;
@@ -676,7 +682,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c[9]";
+	CHANNEL = "cociente[9]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 15;
@@ -686,7 +692,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c[8]";
+	CHANNEL = "cociente[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 16;
@@ -696,7 +702,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c[7]";
+	CHANNEL = "cociente[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 17;
@@ -706,7 +712,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c[6]";
+	CHANNEL = "cociente[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 18;
@@ -716,7 +722,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c[5]";
+	CHANNEL = "cociente[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 19;
@@ -726,7 +732,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c[4]";
+	CHANNEL = "cociente[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 20;
@@ -736,7 +742,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c[3]";
+	CHANNEL = "cociente[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 21;
@@ -746,7 +752,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c[2]";
+	CHANNEL = "cociente[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 22;
@@ -756,7 +762,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c[1]";
+	CHANNEL = "cociente[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 23;
@@ -766,7 +772,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "output_c[0]";
+	CHANNEL = "cociente[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 24;

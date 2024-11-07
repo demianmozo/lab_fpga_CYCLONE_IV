@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ej_f
-Thu Nov  7 19:03:41 2024
+Thu Nov  7 20:40:52 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -10,7 +10,15 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +45,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Nov  7 19:03:41 2024              ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov  7 20:40:52 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_f                                           ;
 ; Top-level Entity Name              ; division                                       ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; N/A until Partition Merge                      ;
-;     Total combinational functions  ; N/A until Partition Merge                      ;
-;     Dedicated logic registers      ; N/A until Partition Merge                      ;
-; Total registers                    ; N/A until Partition Merge                      ;
-; Total pins                         ; N/A until Partition Merge                      ;
-; Total virtual pins                 ; N/A until Partition Merge                      ;
-; Total memory bits                  ; N/A until Partition Merge                      ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
-; Total PLLs                         ; N/A until Partition Merge                      ;
+; Total logic elements               ; 190                                            ;
+;     Total combinational functions  ; 190                                            ;
+;     Dedicated logic registers      ; 0                                              ;
+; Total registers                    ; 0                                              ;
+; Total pins                         ; 22                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -149,11 +157,163 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; division.vhd                     ; yes             ; User VHDL File               ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd                   ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc      ;         ;
+; db/lpm_divide_4jm.tdf            ; yes             ; Auto-Generated Megafunction  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/lpm_divide_4jm.tdf          ;         ;
+; db/sign_div_unsign_slh.tdf       ; yes             ; Auto-Generated Megafunction  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/sign_div_unsign_slh.tdf     ;         ;
+; db/alt_u_div_c7f.tdf             ; yes             ; Auto-Generated Megafunction  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/alt_u_div_c7f.tdf           ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_7pc.tdf             ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_8pc.tdf             ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 190        ;
+;                                             ;            ;
+; Total combinational functions               ; 190        ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 19         ;
+;     -- 3 input functions                    ; 126        ;
+;     -- <=2 input functions                  ; 45         ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 109        ;
+;     -- arithmetic mode                      ; 81         ;
+;                                             ;            ;
+; Total registers                             ; 0          ;
+;     -- Dedicated logic registers            ; 0          ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 22         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; b[0]~input ;
+; Maximum fan-out                             ; 22         ;
+; Total fan-out                               ; 549        ;
+; Average fan-out                             ; 2.35       ;
++---------------------------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |division                              ; 190 (20)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |division                                                                                                 ; division            ; work         ;
+;    |lpm_divide:Div0|                   ; 170 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_4jm:auto_generated|  ; 170 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0|lpm_divide_4jm:auto_generated                                                   ; lpm_divide_4jm      ; work         ;
+;          |sign_div_unsign_slh:divider| ; 170 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0|lpm_divide_4jm:auto_generated|sign_div_unsign_slh:divider                       ; sign_div_unsign_slh ; work         ;
+;             |alt_u_div_c7f:divider|    ; 170 (170)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0|lpm_divide_4jm:auto_generated|sign_div_unsign_slh:divider|alt_u_div_c7f:divider ; alt_u_div_c7f       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; cociente_convertido[1]                             ; Equal0              ; yes                    ;
+; cociente_convertido[2]                             ; Equal0              ; yes                    ;
+; cociente_convertido[3]                             ; Equal0              ; yes                    ;
+; cociente_convertido[4]                             ; Equal0              ; yes                    ;
+; cociente_convertido[5]                             ; Equal0              ; yes                    ;
+; cociente_convertido[6]                             ; Equal0              ; yes                    ;
+; cociente_convertido[7]                             ; Equal0              ; yes                    ;
+; cociente_convertido[8]                             ; Equal0              ; yes                    ;
+; cociente_convertido[9]                             ; Equal0              ; yes                    ;
+; Number of user-specified and inferred latches = 9  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                ;
+; LPM_WIDTHD             ; 6              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_4jm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 22                          ;
+; cycloneiii_lcell_comb ; 191                         ;
+;     arith             ; 81                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 72                          ;
+;     normal            ; 110                         ;
+;         0 data inputs ; 14                          ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 54                          ;
+;         4 data inputs ; 19                          ;
+;                       ;                             ;
+; Max LUT depth         ; 32.90                       ;
+; Average LUT depth     ; 28.64                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,21 +322,60 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Thu Nov  7 19:03:23 2024
+    Info: Processing started: Thu Nov  7 20:40:32 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ej_f -c ej_f
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file division.vhd
-    Info (12022): Found design unit 1: division-behavioral File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 14
-    Info (12023): Found entity 1: division File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 6
+    Info (12022): Found design unit 1: division-division File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 14
+    Info (12023): Found entity 1: division File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file tb_division.vhd
-    Info (12022): Found design unit 1: tb_division-behavior File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd Line: 10
-    Info (12023): Found entity 1: tb_division File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd Line: 6
-Error (10482): VHDL error at division.vhd(26): object "to_natural" is used but not declared File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 26
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 13229 megabytes
-    Error: Processing ended: Thu Nov  7 19:03:41 2024
-    Error: Elapsed time: 00:00:18
-    Error: Total CPU time (on all processors): 00:00:40
+    Info (12022): Found design unit 1: tb_division-sim File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd Line: 9
+    Info (12023): Found entity 1: tb_division File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd Line: 5
+Info (12127): Elaborating entity "division" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at division.vhd(29): signal "a_convertido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at division.vhd(30): signal "cociente_convertido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at division.vhd(19): inferring latch(es) for signal or variable "cociente_convertido", which holds its previous value in one or more paths through the process File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[1]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[2]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[3]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[4]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[5]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[6]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[7]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[8]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[9]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
+    Info (12134): Parameter "LPM_WIDTHN" = "16"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4jm.tdf
+    Info (12023): Found entity 1: lpm_divide_4jm File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/lpm_divide_4jm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_slh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_slh File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/sign_div_unsign_slh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_c7f.tdf
+    Info (12023): Found entity 1: alt_u_div_c7f File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/alt_u_div_c7f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_8pc.tdf Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "cociente[9]" is stuck at GND File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 212 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 190 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 13298 megabytes
+    Info: Processing ended: Thu Nov  7 20:40:52 2024
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:43
 
 

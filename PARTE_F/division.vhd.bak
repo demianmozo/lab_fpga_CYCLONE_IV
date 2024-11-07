@@ -5,42 +5,29 @@ use ieee.numeric_std.all;
 
 entity division is
     port(
-        input_a : in std_logic_vector(5 downto 0); -- Entrada 'a' (6 bits 4,2)
-        input_b : in std_logic_vector(5 downto 0); -- Entrada 'b' (6 bits 3,3)
-        output_c : out std_logic_vector(9 downto 0)  -- Salida 'c' (10 bits 7,3) segun lo que vimos con celeste
+        a : in std_logic_vector(5 downto 0); -- Entrada 'a' (6 bits 4,2)
+        b : in std_logic_vector(5 downto 0); -- Entrada 'b' (6 bits 3,3)
+        cociente : out std_logic_vector(9 downto 0)  -- Salida 'c' (10 bits 7,3) segun lo que vimos con celeste
     );
 end division;
 
-architecture behavioral of division is
-
-    -- Señales internas para almacenar los valores convertidos
-    signal a_convertido : integer;
-    signal b_convertido : integer;
-    signal cociente : integer;
-
+architecture division of division is
+    signal a_convertido : unsigned(15 downto 0);  -- 6 bits adicionales de p.entera y 4 p.decimal
+    signal cociente_convertido : unsigned(15 downto 0); -- el resultado sera de 16 bits
+	 
 begin
-
-    -- Proceso aritmético para realizar las operaciones
-    procedimiento: process(input_a, input_b) is
+    process(a, b)
     begin
-        -- Convertir 'input_a' a entero y multiplicarlo por 1000  
-        a_convertido <= to_integer(unsigned(input_a)) * 1000;
-
-        -- Convertir 'input_b' a entero
-        b_convertido <= to_integer(unsigned(input_b));
-
-        -- Verificar si 'input_b' es distinto de 0 para evitar división por cero
-        if b_convertido /= 0 then
-            -- Realizar la división de 'a_convertido' entre 'b_convertido'
-            cociente <= a_convertido / b_convertido;
+       
+        a_convertido <= "000000" & unsigned(a) & "0000"; --le agrego los ceros necesarios al dividendo, concatenando vectores
+        
+        -- División entera y asignación del resultado
+        if b= "000000" then 
+          cociente <= (others => '0');  -- Valor predeterminado para división por 0
+			 
         else
-            -- Si 'b_convertido' es 0, asignar 0 a 'cociente' para evitar la división por cero
-            cociente <= 0;
-        end if;
-
-        -- Convertir el resultado 'cociente' de nuevo a un vector de 10 bits y asignarlo a 'output_c'
-        output_c <= std_logic_vector(to_unsigned(cociente, output_c'length));
-
-    end process procedimiento;
-
-end behavioral;
+		  cociente_convertido <= a_convertido / unsigned(b);
+            cociente <= std_logic_vector(cociente_convertido(9 downto 0));  -- recorto el cociente para que quede de 10 bits
+		  end if;
+    end process;
+end division;

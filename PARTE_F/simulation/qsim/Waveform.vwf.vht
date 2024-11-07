@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/07/2024 02:03:36"
+-- Generated on "11/07/2024 20:39:38"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          division
 -- 
@@ -34,94 +34,94 @@ END division_vhd_vec_tst;
 ARCHITECTURE division_arch OF division_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL input_a : STD_LOGIC_VECTOR(5 DOWNTO 0);
-SIGNAL input_b : STD_LOGIC_VECTOR(5 DOWNTO 0);
-SIGNAL output_c : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL a : STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL b : STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL cociente : STD_LOGIC_VECTOR(9 DOWNTO 0);
 COMPONENT division
 	PORT (
-	input_a : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-	input_b : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-	output_c : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	a : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+	b : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+	cociente : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
 	i1 : division
 	PORT MAP (
 -- list connections between master ports and signals
-	input_a => input_a,
-	input_b => input_b,
-	output_c => output_c
+	a => a,
+	b => b,
+	cociente => cociente
 	);
--- input_a[5]
-t_prcs_input_a_5: PROCESS
+-- a[5]
+t_prcs_a_5: PROCESS
 BEGIN
-	input_a(5) <= '0';
+	a(5) <= '1';
 WAIT;
-END PROCESS t_prcs_input_a_5;
--- input_a[4]
-t_prcs_input_a_4: PROCESS
+END PROCESS t_prcs_a_5;
+-- a[4]
+t_prcs_a_4: PROCESS
 BEGIN
-	input_a(4) <= '0';
+	a(4) <= '1';
 WAIT;
-END PROCESS t_prcs_input_a_4;
--- input_a[3]
-t_prcs_input_a_3: PROCESS
+END PROCESS t_prcs_a_4;
+-- a[3]
+t_prcs_a_3: PROCESS
 BEGIN
-	input_a(3) <= '0';
+	a(3) <= '0';
 WAIT;
-END PROCESS t_prcs_input_a_3;
--- input_a[2]
-t_prcs_input_a_2: PROCESS
+END PROCESS t_prcs_a_3;
+-- a[2]
+t_prcs_a_2: PROCESS
 BEGIN
-	input_a(2) <= '1';
+	a(2) <= '0';
 WAIT;
-END PROCESS t_prcs_input_a_2;
--- input_a[1]
-t_prcs_input_a_1: PROCESS
+END PROCESS t_prcs_a_2;
+-- a[1]
+t_prcs_a_1: PROCESS
 BEGIN
-	input_a(1) <= '1';
+	a(1) <= '1';
 WAIT;
-END PROCESS t_prcs_input_a_1;
--- input_a[0]
-t_prcs_input_a_0: PROCESS
+END PROCESS t_prcs_a_1;
+-- a[0]
+t_prcs_a_0: PROCESS
 BEGIN
-	input_a(0) <= '0';
+	a(0) <= '0';
 WAIT;
-END PROCESS t_prcs_input_a_0;
--- input_b[5]
-t_prcs_input_b_5: PROCESS
+END PROCESS t_prcs_a_0;
+-- b[5]
+t_prcs_b_5: PROCESS
 BEGIN
-	input_b(5) <= '0';
+	b(5) <= '0';
 WAIT;
-END PROCESS t_prcs_input_b_5;
--- input_b[4]
-t_prcs_input_b_4: PROCESS
+END PROCESS t_prcs_b_5;
+-- b[4]
+t_prcs_b_4: PROCESS
 BEGIN
-	input_b(4) <= '0';
+	b(4) <= '1';
 WAIT;
-END PROCESS t_prcs_input_b_4;
--- input_b[3]
-t_prcs_input_b_3: PROCESS
+END PROCESS t_prcs_b_4;
+-- b[3]
+t_prcs_b_3: PROCESS
 BEGIN
-	input_b(3) <= '0';
+	b(3) <= '0';
 WAIT;
-END PROCESS t_prcs_input_b_3;
--- input_b[2]
-t_prcs_input_b_2: PROCESS
+END PROCESS t_prcs_b_3;
+-- b[2]
+t_prcs_b_2: PROCESS
 BEGIN
-	input_b(2) <= '1';
+	b(2) <= '1';
 WAIT;
-END PROCESS t_prcs_input_b_2;
--- input_b[1]
-t_prcs_input_b_1: PROCESS
+END PROCESS t_prcs_b_2;
+-- b[1]
+t_prcs_b_1: PROCESS
 BEGIN
-	input_b(1) <= '0';
+	b(1) <= '0';
 WAIT;
-END PROCESS t_prcs_input_b_1;
--- input_b[0]
-t_prcs_input_b_0: PROCESS
+END PROCESS t_prcs_b_1;
+-- b[0]
+t_prcs_b_0: PROCESS
 BEGIN
-	input_b(0) <= '1';
+	b(0) <= '0';
 WAIT;
-END PROCESS t_prcs_input_b_0;
+END PROCESS t_prcs_b_0;
 END division_arch;

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Nov  7 02:10:45 2024
+Fitter Status : Successful - Thu Nov  7 20:41:02 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : ej_f
 Top-level Entity Name : division
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 1,153 / 22,320 ( 5 % )
-    Total combinational functions : 1,153 / 22,320 ( 5 % )
+Total logic elements : 190 / 22,320 ( < 1 % )
+    Total combinational functions : 190 / 22,320 ( < 1 % )
     Dedicated logic registers : 0 / 22,320 ( 0 % )
 Total registers : 0
 Total pins : 22 / 154 ( 14 % )

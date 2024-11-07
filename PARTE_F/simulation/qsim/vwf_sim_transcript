@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_f -c ej_f --vector_source="//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/Waveform.vwf" --testbench_file="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_f -c ej_f --vector_source="//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/Waveform.vwf" --testbench_file="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/Waveform.vwf.vht"
 
 TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function free
 
@@ -28,15 +28,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Nov  7 02:03:36 2024
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_f -c ej_f --vector_source="//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/Waveform.vwf" --testbench_file="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/Waveform.vwf.vht"
+    Info: Processing started: Thu Nov  7 20:39:38 2024
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off ej_f -c ej_f --vector_source=//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/Waveform.vwf --testbench_file=//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/Waveform.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/" ej_f -c ej_f
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/" ej_f -c ej_f
 
 TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function free
 
@@ -57,21 +57,21 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Nov  7 02:03:37 2024
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/" ej_f -c ej_f
+    Info: Processing started: Thu Nov  7 20:39:39 2024
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/ ej_f -c ej_f
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file ej_f.vho in folder "//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file ej_f.vho in folder "//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 13074 megabytes
-    Info: Processing ended: Thu Nov  7 02:03:38 2024
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 13076 megabytes
+    Info: Processing ended: Thu Nov  7 20:39:39 2024
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/ej_f.do generated.
+//mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/ej_f.do generated.
 
 Completed successfully. 
 
@@ -104,7 +104,6 @@ Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package VITAL_Primitives
 
 # -- Loading package cycloneive_atom_pack
-
 # -- Loading package cycloneive_components
 
 # -- Compiling entity hard_block
@@ -143,6 +142,8 @@ Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
 # ** Warning: Design size of 6 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
@@ -153,13 +154,13 @@ Completed successfully.
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/Waveform.vwf...
+Reading //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/Waveform.vwf...
 
-Reading //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/ej_f.msim.vcd...
+Reading //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/ej_f.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE F/simulation/qsim/ej_f_20241107020340.sim.vwf
+Writing the resulting VWF to //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/simulation/qsim/ej_f_20241107203941.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -2,72 +2,65 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
--- Definición de la entidad del testbench
 entity tb_division is
+    -- Testbench no tiene puertos
 end tb_division;
 
--- Arquitectura del testbench
-architecture behavior of tb_division is
+architecture sim of tb_division is
 
-    -- Componentes a instanciar
+    -- Declaración de señales para las entradas y salidas del DUT
+    signal a : std_logic_vector(5 downto 0); -- Entrada 'a' (6 bits, 4 parte entera, 2 parte decimal)
+    signal b : std_logic_vector(5 downto 0); -- Entrada 'b' (6 bits, 3 parte entera, 3 parte decimal)
+    signal cociente : std_logic_vector(9 downto 0); -- Salida 'c' (10 bits, 7 parte entera, 3 parte decimal)
+
+    -- Instancia del divisor
     component division
         port(
-            input_a : in std_logic_vector(5 downto 0); -- Entrada 'a' (4 bits parte entera, 2 bits parte decimal)
-            input_b : in std_logic_vector(5 downto 0); -- Entrada 'b' (3 bits parte entera, 3 bits parte decimal)
-            output_c : out std_logic_vector(9 downto 0) -- Salida 'c' (7 bits parte entera, 3 bits parte decimal)
+            a : in std_logic_vector(5 downto 0);
+            b : in std_logic_vector(5 downto 0);
+            cociente : out std_logic_vector(9 downto 0)
         );
     end component;
 
-    -- Señales para conectar al componente
-    signal input_a : std_logic_vector(5 downto 0);
-    signal input_b : std_logic_vector(5 downto 0);
-    signal output_c : std_logic_vector(9 downto 0);
-
 begin
-
-    -- Instanciación del divisor
+    -- Instanciamos el divisor
     uut: division
         port map(
-            input_a => input_a,
-            input_b => input_b,
-            output_c => output_c
+            a => a,
+            b => b,
+            cociente => cociente
         );
 
-    -- Estímulos para el testbench
+    -- Proceso de estimulación . chat gpt sos lo mas grande que hay
     stim_proc: process
     begin
-        -- Test 1: División de 6.25 / 2.5 = 2.5
-        input_a <= "000110"; -- 6.25 en binario (a = 6,25)
-        input_b <= "000101"; -- 2.5 en binario (b = 2,5)
+        -- Caso 1: 6.25 / 2.5 = 2.5 (00000010100 en formato 7,3)
+        a <= "110010";  -- 6.25 en formato 4,2 (1100.10)
+        b <= "010100";  -- 2.5 en formato 3,3 (010.100)
         wait for 10 ns;
-        -- Esperamos que la salida sea 2.5, es decir, 00000001000 (2.5 en formato 7,3)
 
-        -- Test 2: División de 10.5 / 3.25 = 3.23 (aproximadamente)
-        input_a <= "001010"; -- 10.5 en binario (a = 10,5)
-        input_b <= "001100"; -- 3.25 en binario (b = 3,25)
+        -- Caso 2: 3.75 / 1.25 = 3.0
+        a <= "111000";  -- 3.75 en formato 4,2 (111.000)
+        b <= "001010";  -- 1.25 en formato 3,3 (001.010)
         wait for 10 ns;
-        -- Esperamos que la salida sea 3.23, es decir, 00000011000 (aproximadamente 3.23 en formato 7,3)
 
-        -- Test 3: División de 5 / 2 = 2.5
-        input_a <= "001010"; -- 5 en binario (a = 5,00)
-        input_b <= "000010"; -- 2 en binario (b = 2,00)
+        -- Caso 3: 1.5 / 0.5 = 3.0
+        a <= "011000";  -- 1.5 en formato 4,2 (011.00)
+        b <= "000100";  -- 0.5 en formato 3,3 (000.100)
         wait for 10 ns;
-        -- Esperamos que la salida sea 2.5, es decir, 00000001000 (2.5 en formato 7,3)
 
-        -- Test 4: División por 0 (debe dar 0 en la salida)
-        input_a <= "000100"; -- 4 en binario (a = 4,00)
-        input_b <= "000000"; -- 0 en binario (b = 0,00)
+        -- Caso 4: 0 / 4.5 = 0
+        a <= "000000";  -- 0 en formato 4,2 (000.00)
+        b <= "100100";  -- 4.5 en formato 3,3 (100.100)
         wait for 10 ns;
-        -- Verificamos que la salida sea 0, es decir, 00000000000 (0 en formato 7,3)
 
-        -- Test 5: División de 8 / 2 = 4
-        input_a <= "001000"; -- 8 en binario (a = 8,00)
-        input_b <= "000010"; -- 2 en binario (b = 2,00)
+        -- Caso 5: Dividir por 0 (0 / 0.75)
+        a <= "001000";  -- 2.0 en formato 4,2 (001.000)
+        b <= "000000";  -- 0 en formato 3,3 (000.000)
         wait for 10 ns;
-        -- Esperamos que la salida sea 4, es decir, 00000010000 (4 en formato 7,3)
 
-        -- Finalizamos la simulación
+        -- Fin de la simulación
         wait;
-    end process stim_proc;
+    end process;
 
-end behavior;
+end sim;
