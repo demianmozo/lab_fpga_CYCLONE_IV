@@ -1,5 +1,5 @@
 Timing Analyzer report for ej_e
-Wed Nov  6 20:26:43 2024
+Thu Nov  7 01:17:59 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -17,8 +17,8 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   9. Slow 1200mV 85C Model Recovery Summary
  10. Slow 1200mV 85C Model Removal Summary
  11. Slow 1200mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1200mV 85C Model Setup: 'clock'
- 13. Slow 1200mV 85C Model Hold: 'clock'
+ 12. Slow 1200mV 85C Model Setup: 'SCL'
+ 13. Slow 1200mV 85C Model Hold: 'SCL'
  14. Slow 1200mV 85C Model Metastability Summary
  15. Slow 1200mV 0C Model Fmax Summary
  16. Slow 1200mV 0C Model Setup Summary
@@ -26,16 +26,16 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
  18. Slow 1200mV 0C Model Recovery Summary
  19. Slow 1200mV 0C Model Removal Summary
  20. Slow 1200mV 0C Model Minimum Pulse Width Summary
- 21. Slow 1200mV 0C Model Setup: 'clock'
- 22. Slow 1200mV 0C Model Hold: 'clock'
+ 21. Slow 1200mV 0C Model Setup: 'SCL'
+ 22. Slow 1200mV 0C Model Hold: 'SCL'
  23. Slow 1200mV 0C Model Metastability Summary
  24. Fast 1200mV 0C Model Setup Summary
  25. Fast 1200mV 0C Model Hold Summary
  26. Fast 1200mV 0C Model Recovery Summary
  27. Fast 1200mV 0C Model Removal Summary
  28. Fast 1200mV 0C Model Minimum Pulse Width Summary
- 29. Fast 1200mV 0C Model Setup: 'clock'
- 30. Fast 1200mV 0C Model Hold: 'clock'
+ 29. Fast 1200mV 0C Model Setup: 'SCL'
+ 30. Fast 1200mV 0C Model Hold: 'SCL'
  31. Fast 1200mV 0C Model Metastability Summary
  32. Multicorner Timing Analysis Summary
  33. Board Trace Model Assignments
@@ -108,13 +108,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                            ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
-; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
-; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; SCL        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SCL } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -122,7 +122,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 821.69 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 569.15 MHz ; 250.0 MHz       ; SCL        ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -138,7 +138,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; clock ; -0.217 ; -0.399             ;
+; SCL   ; -0.757 ; -9.508             ;
 +-------+--------+--------------------+
 
 
@@ -147,7 +147,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clock ; 0.358 ; 0.000              ;
+; SCL   ; 0.358 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -168,42 +168,202 @@ No paths to report.
 +-------+--------+----------------------------------+
 ; Clock ; Slack  ; End Point TNS                    ;
 +-------+--------+----------------------------------+
-; clock ; -3.000 ; -8.000                           ;
+; SCL   ; -3.000 ; -23.000                          ;
 +-------+--------+----------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup: 'clock'                                                                                   ;
-+--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; -0.217 ; fstate.Guarda_Data ; fstate.Idle        ; clock        ; clock       ; 1.000        ; -0.062     ; 1.150      ;
-; -0.214 ; fstate.Idle        ; fstate.Idle        ; clock        ; clock       ; 1.000        ; -0.062     ; 1.147      ;
-; -0.209 ; fstate.Guarda_Dir  ; fstate.Idle        ; clock        ; clock       ; 1.000        ; -0.062     ; 1.142      ;
-; -0.182 ; fstate.Idle        ; fstate.Guarda_Dir  ; clock        ; clock       ; 1.000        ; -0.062     ; 1.115      ;
-; -0.109 ; fstate.Guarda_Dir  ; fstate.Guarda_Dir  ; clock        ; clock       ; 1.000        ; -0.062     ; 1.042      ;
-; 0.204  ; fstate.Guarda_Dir  ; fstate.RW          ; clock        ; clock       ; 1.000        ; -0.062     ; 0.729      ;
-; 0.236  ; fstate.ACK         ; fstate.Guarda_Data ; clock        ; clock       ; 1.000        ; -0.062     ; 0.697      ;
-; 0.245  ; fstate.RW          ; fstate.ACK         ; clock        ; clock       ; 1.000        ; -0.062     ; 0.688      ;
-; 0.296  ; fstate.Guarda_Data ; fstate.Guarda_Data ; clock        ; clock       ; 1.000        ; -0.062     ; 0.637      ;
-+--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'SCL'                                                                                                                                       ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.757 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.690      ;
+; -0.756 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.689      ;
+; -0.746 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.679      ;
+; -0.746 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.679      ;
+; -0.746 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.679      ;
+; -0.746 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.679      ;
+; -0.746 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.679      ;
+; -0.746 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.679      ;
+; -0.746 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.679      ;
+; -0.741 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.674      ;
+; -0.738 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.671      ;
+; -0.647 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.580      ;
+; -0.642 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.575      ;
+; -0.642 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.575      ;
+; -0.642 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.575      ;
+; -0.642 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.575      ;
+; -0.642 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.575      ;
+; -0.642 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.575      ;
+; -0.642 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.575      ;
+; -0.583 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.516      ;
+; -0.580 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.513      ;
+; -0.570 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.503      ;
+; -0.569 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.502      ;
+; -0.535 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.468      ;
+; -0.534 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.467      ;
+; -0.527 ; guarda_data:inst2|finalizo_int              ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.460      ;
+; -0.519 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.452      ;
+; -0.519 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.452      ;
+; -0.519 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.452      ;
+; -0.519 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.452      ;
+; -0.519 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.452      ;
+; -0.519 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.452      ;
+; -0.519 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.452      ;
+; -0.511 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.064     ; 1.442      ;
+; -0.499 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.060     ; 1.434      ;
+; -0.461 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.064     ; 1.392      ;
+; -0.444 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.377      ;
+; -0.443 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.376      ;
+; -0.440 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.373      ;
+; -0.426 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.060     ; 1.361      ;
+; -0.402 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.060     ; 1.337      ;
+; -0.392 ; guarda_dir:inst3|finalizo_int               ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.325      ;
+; -0.391 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.324      ;
+; -0.388 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.321      ;
+; -0.385 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.318      ;
+; -0.363 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.296      ;
+; -0.356 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.064     ; 1.287      ;
+; -0.343 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.276      ;
+; -0.295 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.228      ;
+; -0.268 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.060     ; 1.203      ;
+; -0.265 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.060     ; 1.200      ;
+; -0.260 ; guarda_dir:inst3|registro[5]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.193      ;
+; -0.247 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 1.000        ; -0.064     ; 1.178      ;
+; -0.226 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.159      ;
+; -0.203 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.060     ; 1.138      ;
+; -0.178 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.111      ;
+; -0.164 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.097      ;
+; -0.163 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.096      ;
+; -0.150 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.083      ;
+; -0.150 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.064     ; 1.081      ;
+; -0.149 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.064     ; 1.080      ;
+; -0.147 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.080      ;
+; -0.130 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.063      ;
+; -0.128 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.061      ;
+; -0.109 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.042      ;
+; -0.106 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.039      ;
+; -0.106 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 1.039      ;
+; -0.034 ; guarda_dir:inst3|registro[4]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.967      ;
+; -0.032 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.965      ;
+; -0.020 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.953      ;
+; -0.020 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.953      ;
+; -0.020 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.953      ;
+; -0.018 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.951      ;
+; -0.017 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.950      ;
+; 0.058  ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.064     ; 0.873      ;
+; 0.087  ; control_i2c_esclavo:inst|fstate.RW          ; control_i2c_esclavo:inst|fstate.ACK         ; SCL          ; SCL         ; 1.000        ; -0.060     ; 0.848      ;
+; 0.100  ; guarda_dir:inst3|registro[3]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.833      ;
+; 0.226  ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.707      ;
+; 0.233  ; guarda_dir:inst3|registro[0]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.700      ;
+; 0.235  ; guarda_dir:inst3|registro[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.698      ;
+; 0.235  ; guarda_dir:inst3|registro[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.698      ;
+; 0.235  ; control_i2c_esclavo:inst|fstate.ACK         ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.698      ;
+; 0.274  ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.659      ;
+; 0.274  ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.659      ;
+; 0.274  ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.659      ;
+; 0.274  ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.659      ;
+; 0.296  ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.637      ;
+; 0.296  ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.637      ;
+; 0.296  ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 1.000        ; -0.062     ; 0.637      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold: 'clock'                                                                                   ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; 0.358 ; fstate.Guarda_Data ; fstate.Guarda_Data ; clock        ; clock       ; 0.000        ; 0.062      ; 0.577      ;
-; 0.373 ; fstate.RW          ; fstate.ACK         ; clock        ; clock       ; 0.000        ; 0.062      ; 0.592      ;
-; 0.380 ; fstate.ACK         ; fstate.Guarda_Data ; clock        ; clock       ; 0.000        ; 0.062      ; 0.599      ;
-; 0.408 ; fstate.Guarda_Dir  ; fstate.RW          ; clock        ; clock       ; 0.000        ; 0.062      ; 0.627      ;
-; 0.702 ; fstate.Guarda_Dir  ; fstate.Guarda_Dir  ; clock        ; clock       ; 0.000        ; 0.062      ; 0.921      ;
-; 0.776 ; fstate.Guarda_Data ; fstate.Idle        ; clock        ; clock       ; 0.000        ; 0.062      ; 0.995      ;
-; 0.792 ; fstate.Idle        ; fstate.Guarda_Dir  ; clock        ; clock       ; 0.000        ; 0.062      ; 1.011      ;
-; 0.801 ; fstate.Guarda_Dir  ; fstate.Idle        ; clock        ; clock       ; 0.000        ; 0.062      ; 1.020      ;
-; 0.838 ; fstate.Idle        ; fstate.Idle        ; clock        ; clock       ; 0.000        ; 0.062      ; 1.057      ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'SCL'                                                                                                                                       ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.358 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.361 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.580      ;
+; 0.381 ; guarda_dir:inst3|registro[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.600      ;
+; 0.381 ; guarda_dir:inst3|registro[0]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.600      ;
+; 0.381 ; guarda_dir:inst3|registro[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.600      ;
+; 0.382 ; control_i2c_esclavo:inst|fstate.ACK         ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.601      ;
+; 0.387 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.606      ;
+; 0.517 ; guarda_dir:inst3|registro[3]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.736      ;
+; 0.531 ; control_i2c_esclavo:inst|fstate.RW          ; control_i2c_esclavo:inst|fstate.ACK         ; SCL          ; SCL         ; 0.000        ; 0.064      ; 0.752      ;
+; 0.560 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.060      ; 0.777      ;
+; 0.566 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.785      ;
+; 0.566 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.785      ;
+; 0.569 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.788      ;
+; 0.571 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.790      ;
+; 0.582 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.801      ;
+; 0.622 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.841      ;
+; 0.625 ; guarda_dir:inst3|registro[4]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.844      ;
+; 0.694 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.913      ;
+; 0.695 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.914      ;
+; 0.696 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.915      ;
+; 0.705 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.924      ;
+; 0.717 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.060      ; 0.934      ;
+; 0.717 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.060      ; 0.934      ;
+; 0.722 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.941      ;
+; 0.724 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.943      ;
+; 0.732 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.951      ;
+; 0.755 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.974      ;
+; 0.757 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.064      ; 0.978      ;
+; 0.762 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.981      ;
+; 0.765 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.062      ; 0.984      ;
+; 0.785 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.004      ;
+; 0.853 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 0.000        ; 0.060      ; 1.070      ;
+; 0.858 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.064      ; 1.079      ;
+; 0.862 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.064      ; 1.083      ;
+; 0.866 ; guarda_dir:inst3|finalizo_int               ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.085      ;
+; 0.890 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.109      ;
+; 0.892 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.111      ;
+; 0.893 ; guarda_dir:inst3|registro[5]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.112      ;
+; 0.895 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.114      ;
+; 0.920 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.060      ; 1.137      ;
+; 0.945 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.164      ;
+; 0.958 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.177      ;
+; 0.963 ; guarda_data:inst2|finalizo_int              ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.182      ;
+; 0.975 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.064      ; 1.196      ;
+; 0.979 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.198      ;
+; 0.988 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.064      ; 1.209      ;
+; 0.992 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.211      ;
+; 0.997 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.060      ; 1.214      ;
+; 1.059 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.278      ;
+; 1.059 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.278      ;
+; 1.077 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.296      ;
+; 1.080 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.299      ;
+; 1.094 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.064      ; 1.315      ;
+; 1.111 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.060      ; 1.328      ;
+; 1.118 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.337      ;
+; 1.121 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.340      ;
+; 1.213 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.432      ;
+; 1.213 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.432      ;
+; 1.216 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.435      ;
+; 1.237 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.456      ;
+; 1.237 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.456      ;
+; 1.237 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.456      ;
+; 1.237 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.456      ;
+; 1.237 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.456      ;
+; 1.237 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.456      ;
+; 1.237 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.456      ;
+; 1.270 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.489      ;
+; 1.273 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.492      ;
+; 1.337 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.556      ;
+; 1.337 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.556      ;
+; 1.350 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.569      ;
+; 1.350 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.569      ;
+; 1.350 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.569      ;
+; 1.350 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.569      ;
+; 1.350 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.569      ;
+; 1.350 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.569      ;
+; 1.350 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.569      ;
+; 1.428 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.647      ;
+; 1.428 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.647      ;
+; 1.428 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.647      ;
+; 1.428 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.647      ;
+; 1.428 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.647      ;
+; 1.428 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.647      ;
+; 1.428 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.062      ; 1.647      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 -----------------------------------------------
@@ -217,7 +377,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 914.08 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 635.73 MHz ; 250.0 MHz       ; SCL        ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -227,7 +387,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clock ; -0.094 ; -0.165            ;
+; SCL   ; -0.573 ; -6.601            ;
 +-------+--------+-------------------+
 
 
@@ -236,7 +396,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clock ; 0.313 ; 0.000             ;
+; SCL   ; 0.312 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -257,42 +417,202 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clock ; -3.000 ; -8.000                          ;
+; SCL   ; -3.000 ; -23.000                         ;
 +-------+--------+---------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup: 'clock'                                                                                    ;
-+--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; -0.094 ; fstate.Guarda_Data ; fstate.Idle        ; clock        ; clock       ; 1.000        ; -0.054     ; 1.035      ;
-; -0.089 ; fstate.Guarda_Dir  ; fstate.Idle        ; clock        ; clock       ; 1.000        ; -0.054     ; 1.030      ;
-; -0.082 ; fstate.Idle        ; fstate.Idle        ; clock        ; clock       ; 1.000        ; -0.054     ; 1.023      ;
-; -0.071 ; fstate.Idle        ; fstate.Guarda_Dir  ; clock        ; clock       ; 1.000        ; -0.054     ; 1.012      ;
-; 0.017  ; fstate.Guarda_Dir  ; fstate.Guarda_Dir  ; clock        ; clock       ; 1.000        ; -0.054     ; 0.924      ;
-; 0.292  ; fstate.Guarda_Dir  ; fstate.RW          ; clock        ; clock       ; 1.000        ; -0.054     ; 0.649      ;
-; 0.323  ; fstate.ACK         ; fstate.Guarda_Data ; clock        ; clock       ; 1.000        ; -0.054     ; 0.618      ;
-; 0.331  ; fstate.RW          ; fstate.ACK         ; clock        ; clock       ; 1.000        ; -0.054     ; 0.610      ;
-; 0.379  ; fstate.Guarda_Data ; fstate.Guarda_Data ; clock        ; clock       ; 1.000        ; -0.054     ; 0.562      ;
-+--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'SCL'                                                                                                                                        ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.573 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.513      ;
+; -0.573 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.513      ;
+; -0.573 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.513      ;
+; -0.573 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.513      ;
+; -0.573 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.513      ;
+; -0.573 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.513      ;
+; -0.573 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.513      ;
+; -0.566 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.506      ;
+; -0.565 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.505      ;
+; -0.564 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.504      ;
+; -0.563 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.503      ;
+; -0.486 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.426      ;
+; -0.486 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.426      ;
+; -0.486 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.426      ;
+; -0.486 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.426      ;
+; -0.486 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.426      ;
+; -0.486 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.426      ;
+; -0.486 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.426      ;
+; -0.468 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.408      ;
+; -0.433 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.373      ;
+; -0.430 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.370      ;
+; -0.393 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.333      ;
+; -0.392 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.332      ;
+; -0.370 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.310      ;
+; -0.370 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.310      ;
+; -0.370 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.310      ;
+; -0.370 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.310      ;
+; -0.370 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.310      ;
+; -0.370 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.310      ;
+; -0.370 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.310      ;
+; -0.369 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.309      ;
+; -0.368 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.308      ;
+; -0.362 ; guarda_data:inst2|finalizo_int              ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.302      ;
+; -0.350 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.057     ; 1.288      ;
+; -0.334 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.053     ; 1.276      ;
+; -0.307 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.057     ; 1.245      ;
+; -0.295 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.235      ;
+; -0.292 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.232      ;
+; -0.289 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.229      ;
+; -0.274 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.053     ; 1.216      ;
+; -0.249 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.189      ;
+; -0.246 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.053     ; 1.188      ;
+; -0.237 ; guarda_dir:inst3|finalizo_int               ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.177      ;
+; -0.229 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.169      ;
+; -0.227 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.167      ;
+; -0.222 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.162      ;
+; -0.220 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.057     ; 1.158      ;
+; -0.206 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.146      ;
+; -0.166 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.106      ;
+; -0.125 ; guarda_dir:inst3|registro[5]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.065      ;
+; -0.125 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 1.000        ; -0.057     ; 1.063      ;
+; -0.123 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.053     ; 1.065      ;
+; -0.118 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.053     ; 1.060      ;
+; -0.096 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.055     ; 1.036      ;
+; -0.066 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.053     ; 1.008      ;
+; -0.045 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.985      ;
+; -0.036 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.976      ;
+; -0.035 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.975      ;
+; -0.021 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.057     ; 0.959      ;
+; -0.020 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.057     ; 0.958      ;
+; -0.017 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.957      ;
+; -0.015 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.955      ;
+; -0.005 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.945      ;
+; -0.002 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.942      ;
+; 0.015  ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.925      ;
+; 0.018  ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.922      ;
+; 0.018  ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.922      ;
+; 0.077  ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.863      ;
+; 0.080  ; guarda_dir:inst3|registro[4]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.860      ;
+; 0.096  ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.844      ;
+; 0.096  ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.844      ;
+; 0.097  ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.843      ;
+; 0.098  ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.842      ;
+; 0.100  ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.840      ;
+; 0.160  ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.057     ; 0.778      ;
+; 0.192  ; guarda_dir:inst3|registro[3]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.748      ;
+; 0.196  ; control_i2c_esclavo:inst|fstate.RW          ; control_i2c_esclavo:inst|fstate.ACK         ; SCL          ; SCL         ; 1.000        ; -0.053     ; 0.746      ;
+; 0.313  ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.627      ;
+; 0.318  ; guarda_dir:inst3|registro[0]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.622      ;
+; 0.321  ; guarda_dir:inst3|registro[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.619      ;
+; 0.321  ; guarda_dir:inst3|registro[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.619      ;
+; 0.321  ; control_i2c_esclavo:inst|fstate.ACK         ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.619      ;
+; 0.357  ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.583      ;
+; 0.357  ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.583      ;
+; 0.357  ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.583      ;
+; 0.357  ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.583      ;
+; 0.378  ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.562      ;
+; 0.378  ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.562      ;
+; 0.378  ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 1.000        ; -0.055     ; 0.562      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold: 'clock'                                                                                    ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; 0.313 ; fstate.Guarda_Data ; fstate.Guarda_Data ; clock        ; clock       ; 0.000        ; 0.054      ; 0.511      ;
-; 0.340 ; fstate.RW          ; fstate.ACK         ; clock        ; clock       ; 0.000        ; 0.054      ; 0.538      ;
-; 0.346 ; fstate.ACK         ; fstate.Guarda_Data ; clock        ; clock       ; 0.000        ; 0.054      ; 0.544      ;
-; 0.371 ; fstate.Guarda_Dir  ; fstate.RW          ; clock        ; clock       ; 0.000        ; 0.054      ; 0.569      ;
-; 0.640 ; fstate.Guarda_Dir  ; fstate.Guarda_Dir  ; clock        ; clock       ; 0.000        ; 0.054      ; 0.838      ;
-; 0.698 ; fstate.Guarda_Data ; fstate.Idle        ; clock        ; clock       ; 0.000        ; 0.054      ; 0.896      ;
-; 0.708 ; fstate.Idle        ; fstate.Guarda_Dir  ; clock        ; clock       ; 0.000        ; 0.054      ; 0.906      ;
-; 0.722 ; fstate.Guarda_Dir  ; fstate.Idle        ; clock        ; clock       ; 0.000        ; 0.054      ; 0.920      ;
-; 0.766 ; fstate.Idle        ; fstate.Idle        ; clock        ; clock       ; 0.000        ; 0.054      ; 0.964      ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'SCL'                                                                                                                                        ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.312 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.320 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.519      ;
+; 0.344 ; guarda_dir:inst3|registro[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.543      ;
+; 0.345 ; control_i2c_esclavo:inst|fstate.ACK         ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.544      ;
+; 0.346 ; guarda_dir:inst3|registro[0]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.545      ;
+; 0.346 ; guarda_dir:inst3|registro[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.545      ;
+; 0.350 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.549      ;
+; 0.466 ; guarda_dir:inst3|registro[3]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.665      ;
+; 0.488 ; control_i2c_esclavo:inst|fstate.RW          ; control_i2c_esclavo:inst|fstate.ACK         ; SCL          ; SCL         ; 0.000        ; 0.057      ; 0.689      ;
+; 0.509 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.708      ;
+; 0.509 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.708      ;
+; 0.510 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.709      ;
+; 0.511 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.710      ;
+; 0.515 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.053      ; 0.712      ;
+; 0.522 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.721      ;
+; 0.557 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.756      ;
+; 0.572 ; guarda_dir:inst3|registro[4]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.771      ;
+; 0.631 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.830      ;
+; 0.632 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.831      ;
+; 0.633 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.832      ;
+; 0.647 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.846      ;
+; 0.650 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.053      ; 0.847      ;
+; 0.650 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.053      ; 0.847      ;
+; 0.657 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.856      ;
+; 0.658 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.857      ;
+; 0.672 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.871      ;
+; 0.685 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.884      ;
+; 0.687 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.886      ;
+; 0.688 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.887      ;
+; 0.695 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.057      ; 0.896      ;
+; 0.712 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.911      ;
+; 0.770 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 0.000        ; 0.053      ; 0.967      ;
+; 0.783 ; guarda_dir:inst3|finalizo_int               ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.982      ;
+; 0.788 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.057      ; 0.989      ;
+; 0.794 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.057      ; 0.995      ;
+; 0.798 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 0.000        ; 0.055      ; 0.997      ;
+; 0.801 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.000      ;
+; 0.803 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.002      ;
+; 0.825 ; guarda_dir:inst3|registro[5]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.024      ;
+; 0.839 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.053      ; 1.036      ;
+; 0.867 ; guarda_data:inst2|finalizo_int              ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.066      ;
+; 0.868 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.067      ;
+; 0.875 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.074      ;
+; 0.888 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.087      ;
+; 0.896 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.095      ;
+; 0.896 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.057      ; 1.097      ;
+; 0.907 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.053      ; 1.104      ;
+; 0.909 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.057      ; 1.110      ;
+; 0.947 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.146      ;
+; 0.948 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.147      ;
+; 0.980 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.179      ;
+; 0.982 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.181      ;
+; 1.006 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.057      ; 1.207      ;
+; 1.009 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.053      ; 1.206      ;
+; 1.017 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.216      ;
+; 1.019 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.218      ;
+; 1.083 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.282      ;
+; 1.084 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.283      ;
+; 1.099 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.298      ;
+; 1.121 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.320      ;
+; 1.121 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.320      ;
+; 1.121 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.320      ;
+; 1.121 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.320      ;
+; 1.121 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.320      ;
+; 1.121 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.320      ;
+; 1.121 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.320      ;
+; 1.150 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.349      ;
+; 1.152 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.351      ;
+; 1.193 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.392      ;
+; 1.194 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.393      ;
+; 1.218 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.417      ;
+; 1.218 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.417      ;
+; 1.218 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.417      ;
+; 1.218 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.417      ;
+; 1.218 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.417      ;
+; 1.218 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.417      ;
+; 1.218 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.417      ;
+; 1.292 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.491      ;
+; 1.292 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.491      ;
+; 1.292 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.491      ;
+; 1.292 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.491      ;
+; 1.292 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.491      ;
+; 1.292 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.491      ;
+; 1.292 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.055      ; 1.491      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 ----------------------------------------------
@@ -306,7 +626,7 @@ No synchronizer chains to report.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clock ; 0.327 ; 0.000              ;
+; SCL   ; 0.020 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -315,7 +635,7 @@ No synchronizer chains to report.
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clock ; 0.187 ; 0.000             ;
+; SCL   ; 0.187 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -336,42 +656,202 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clock ; -3.000 ; -8.285                          ;
+; SCL   ; -3.000 ; -24.132                         ;
 +-------+--------+---------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup: 'clock'                                                                                   ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; 0.327 ; fstate.Idle        ; fstate.Idle        ; clock        ; clock       ; 1.000        ; -0.036     ; 0.624      ;
-; 0.330 ; fstate.Guarda_Dir  ; fstate.Idle        ; clock        ; clock       ; 1.000        ; -0.036     ; 0.621      ;
-; 0.330 ; fstate.Guarda_Data ; fstate.Idle        ; clock        ; clock       ; 1.000        ; -0.036     ; 0.621      ;
-; 0.358 ; fstate.Idle        ; fstate.Guarda_Dir  ; clock        ; clock       ; 1.000        ; -0.036     ; 0.593      ;
-; 0.379 ; fstate.Guarda_Dir  ; fstate.Guarda_Dir  ; clock        ; clock       ; 1.000        ; -0.036     ; 0.572      ;
-; 0.552 ; fstate.Guarda_Dir  ; fstate.RW          ; clock        ; clock       ; 1.000        ; -0.036     ; 0.399      ;
-; 0.571 ; fstate.ACK         ; fstate.Guarda_Data ; clock        ; clock       ; 1.000        ; -0.036     ; 0.380      ;
-; 0.578 ; fstate.RW          ; fstate.ACK         ; clock        ; clock       ; 1.000        ; -0.036     ; 0.373      ;
-; 0.601 ; fstate.Guarda_Data ; fstate.Guarda_Data ; clock        ; clock       ; 1.000        ; -0.036     ; 0.350      ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'SCL'                                                                                                                                       ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.020 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.931      ;
+; 0.023 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.928      ;
+; 0.032 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.919      ;
+; 0.032 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.919      ;
+; 0.032 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.919      ;
+; 0.032 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.919      ;
+; 0.032 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.919      ;
+; 0.032 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.919      ;
+; 0.032 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.919      ;
+; 0.046 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.905      ;
+; 0.049 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.902      ;
+; 0.080 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.871      ;
+; 0.102 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.849      ;
+; 0.102 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.849      ;
+; 0.102 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.849      ;
+; 0.102 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.849      ;
+; 0.102 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.849      ;
+; 0.102 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.849      ;
+; 0.102 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.849      ;
+; 0.116 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.835      ;
+; 0.119 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.832      ;
+; 0.127 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.824      ;
+; 0.130 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.821      ;
+; 0.143 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.808      ;
+; 0.146 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.035     ; 0.806      ;
+; 0.146 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.805      ;
+; 0.149 ; guarda_data:inst2|finalizo_int              ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.802      ;
+; 0.150 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.037     ; 0.800      ;
+; 0.156 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.795      ;
+; 0.156 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.795      ;
+; 0.156 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.795      ;
+; 0.156 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.795      ;
+; 0.156 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.795      ;
+; 0.156 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.795      ;
+; 0.156 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.795      ;
+; 0.181 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.037     ; 0.769      ;
+; 0.185 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.035     ; 0.767      ;
+; 0.196 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.755      ;
+; 0.200 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.751      ;
+; 0.203 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.748      ;
+; 0.210 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.741      ;
+; 0.214 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.035     ; 0.738      ;
+; 0.225 ; guarda_dir:inst3|finalizo_int               ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.726      ;
+; 0.226 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.725      ;
+; 0.236 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.715      ;
+; 0.242 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.037     ; 0.708      ;
+; 0.244 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.707      ;
+; 0.263 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.688      ;
+; 0.285 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.035     ; 0.667      ;
+; 0.290 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.035     ; 0.662      ;
+; 0.291 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.660      ;
+; 0.302 ; guarda_dir:inst3|registro[5]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.649      ;
+; 0.311 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 1.000        ; -0.037     ; 0.639      ;
+; 0.317 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.634      ;
+; 0.320 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.035     ; 0.632      ;
+; 0.332 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.619      ;
+; 0.345 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.606      ;
+; 0.347 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.037     ; 0.603      ;
+; 0.348 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.603      ;
+; 0.348 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.037     ; 0.602      ;
+; 0.350 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.601      ;
+; 0.352 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.599      ;
+; 0.367 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.584      ;
+; 0.370 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.581      ;
+; 0.379 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.572      ;
+; 0.380 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.571      ;
+; 0.380 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.571      ;
+; 0.420 ; guarda_dir:inst3|registro[4]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.531      ;
+; 0.421 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.530      ;
+; 0.425 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.526      ;
+; 0.427 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.524      ;
+; 0.428 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.523      ;
+; 0.428 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.523      ;
+; 0.428 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.523      ;
+; 0.466 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 1.000        ; -0.037     ; 0.484      ;
+; 0.484 ; control_i2c_esclavo:inst|fstate.RW          ; control_i2c_esclavo:inst|fstate.ACK         ; SCL          ; SCL         ; 1.000        ; -0.035     ; 0.468      ;
+; 0.514 ; guarda_dir:inst3|registro[3]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.437      ;
+; 0.568 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.383      ;
+; 0.570 ; guarda_dir:inst3|registro[0]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.381      ;
+; 0.570 ; guarda_dir:inst3|registro[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.381      ;
+; 0.571 ; guarda_dir:inst3|registro[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.380      ;
+; 0.571 ; control_i2c_esclavo:inst|fstate.ACK         ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.380      ;
+; 0.592 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.359      ;
+; 0.592 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.359      ;
+; 0.592 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.359      ;
+; 0.592 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.359      ;
+; 0.601 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.350      ;
+; 0.601 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.350      ;
+; 0.601 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 1.000        ; -0.036     ; 0.350      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold: 'clock'                                                                                    ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; 0.187 ; fstate.Guarda_Data ; fstate.Guarda_Data ; clock        ; clock       ; 0.000        ; 0.036      ; 0.307      ;
-; 0.194 ; fstate.RW          ; fstate.ACK         ; clock        ; clock       ; 0.000        ; 0.036      ; 0.314      ;
-; 0.199 ; fstate.ACK         ; fstate.Guarda_Data ; clock        ; clock       ; 0.000        ; 0.036      ; 0.319      ;
-; 0.215 ; fstate.Guarda_Dir  ; fstate.RW          ; clock        ; clock       ; 0.000        ; 0.036      ; 0.335      ;
-; 0.368 ; fstate.Guarda_Dir  ; fstate.Guarda_Dir  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.488      ;
-; 0.414 ; fstate.Guarda_Data ; fstate.Idle        ; clock        ; clock       ; 0.000        ; 0.036      ; 0.534      ;
-; 0.428 ; fstate.Guarda_Dir  ; fstate.Idle        ; clock        ; clock       ; 0.000        ; 0.036      ; 0.548      ;
-; 0.431 ; fstate.Idle        ; fstate.Guarda_Dir  ; clock        ; clock       ; 0.000        ; 0.036      ; 0.551      ;
-; 0.445 ; fstate.Idle        ; fstate.Idle        ; clock        ; clock       ; 0.000        ; 0.036      ; 0.565      ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'SCL'                                                                                                                                        ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.187 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.194 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.199 ; guarda_dir:inst3|registro[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.319      ;
+; 0.199 ; guarda_dir:inst3|registro[0]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.319      ;
+; 0.199 ; control_i2c_esclavo:inst|fstate.ACK         ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.319      ;
+; 0.200 ; guarda_dir:inst3|registro[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.320      ;
+; 0.200 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.320      ;
+; 0.267 ; guarda_dir:inst3|registro[3]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.387      ;
+; 0.271 ; control_i2c_esclavo:inst|fstate.RW          ; control_i2c_esclavo:inst|fstate.ACK         ; SCL          ; SCL         ; 0.000        ; 0.037      ; 0.392      ;
+; 0.290 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.035      ; 0.409      ;
+; 0.303 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.423      ;
+; 0.304 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.305 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.312 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.432      ;
+; 0.326 ; guarda_dir:inst3|registro[4]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.446      ;
+; 0.332 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Guarda_Data ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.452      ;
+; 0.363 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[2]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.483      ;
+; 0.363 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.483      ;
+; 0.363 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; guarda_data:inst2|contador[0]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.483      ;
+; 0.372 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|contador[1]               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.492      ;
+; 0.378 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.035      ; 0.497      ;
+; 0.378 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.498      ;
+; 0.379 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.035      ; 0.498      ;
+; 0.381 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.501      ;
+; 0.389 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[2]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.509      ;
+; 0.398 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.037      ; 0.519      ;
+; 0.399 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.519      ;
+; 0.403 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.523      ;
+; 0.406 ; guarda_dir:inst3|registro[6]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.526      ;
+; 0.415 ; guarda_data:inst2|contador[1]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.535      ;
+; 0.444 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.037      ; 0.565      ;
+; 0.447 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.037      ; 0.568      ;
+; 0.456 ; guarda_dir:inst3|registro[5]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.576      ;
+; 0.458 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 0.000        ; 0.035      ; 0.577      ;
+; 0.459 ; guarda_dir:inst3|finalizo_int               ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.579      ;
+; 0.475 ; guarda_data:inst2|contador[0]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.595      ;
+; 0.484 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.604      ;
+; 0.485 ; guarda_dir:inst3|contador[0]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.605      ;
+; 0.490 ; guarda_data:inst2|finalizo_int              ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.035      ; 0.609      ;
+; 0.499 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|contador[1]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.619      ;
+; 0.499 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.619      ;
+; 0.509 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|finalizo_int               ; SCL          ; SCL         ; 0.000        ; 0.037      ; 0.630      ;
+; 0.515 ; guarda_data:inst2|finalizo_int              ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.635      ;
+; 0.523 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.037      ; 0.644      ;
+; 0.529 ; control_i2c_esclavo:inst|fstate.Idle        ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.649      ;
+; 0.531 ; guarda_data:inst2|contador[2]               ; guarda_data:inst2|finalizo_int              ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.651      ;
+; 0.531 ; control_i2c_esclavo:inst|fstate.Guarda_Data ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.035      ; 0.650      ;
+; 0.567 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.687      ;
+; 0.568 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|contador[0]                ; SCL          ; SCL         ; 0.000        ; 0.037      ; 0.689      ;
+; 0.570 ; guarda_dir:inst3|registro[2]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.690      ;
+; 0.574 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.694      ;
+; 0.577 ; guarda_dir:inst3|registro[5]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.697      ;
+; 0.584 ; guarda_dir:inst3|finalizo_int               ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.035      ; 0.703      ;
+; 0.591 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.711      ;
+; 0.594 ; guarda_dir:inst3|registro[4]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.714      ;
+; 0.643 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.763      ;
+; 0.649 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.769      ;
+; 0.652 ; guarda_dir:inst3|registro[3]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.772      ;
+; 0.662 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.782      ;
+; 0.662 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.782      ;
+; 0.662 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.782      ;
+; 0.662 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.782      ;
+; 0.662 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.782      ;
+; 0.662 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.782      ;
+; 0.662 ; control_i2c_esclavo:inst|fstate.Guarda_Dir  ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.782      ;
+; 0.674 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.794      ;
+; 0.677 ; guarda_dir:inst3|registro[0]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.797      ;
+; 0.728 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.RW          ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.848      ;
+; 0.731 ; guarda_dir:inst3|registro[1]                ; control_i2c_esclavo:inst|fstate.Idle        ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.851      ;
+; 0.736 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.856      ;
+; 0.736 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.856      ;
+; 0.736 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.856      ;
+; 0.736 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.856      ;
+; 0.736 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.856      ;
+; 0.736 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.856      ;
+; 0.736 ; guarda_dir:inst3|contador[1]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.856      ;
+; 0.778 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[2]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.898      ;
+; 0.778 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[1]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.898      ;
+; 0.778 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[0]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.898      ;
+; 0.778 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[3]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.898      ;
+; 0.778 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[6]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.898      ;
+; 0.778 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[5]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.898      ;
+; 0.778 ; guarda_dir:inst3|contador[2]                ; guarda_dir:inst3|registro[4]                ; SCL          ; SCL         ; 0.000        ; 0.036      ; 0.898      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 ----------------------------------------------
@@ -385,10 +865,10 @@ No synchronizer chains to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.217 ; 0.187 ; N/A      ; N/A     ; -3.000              ;
-;  clock           ; -0.217 ; 0.187 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -0.399 ; 0.0   ; 0.0      ; 0.0     ; -8.285              ;
-;  clock           ; -0.399 ; 0.000 ; N/A      ; N/A     ; -8.285              ;
+; Worst-case Slack ; -0.757 ; 0.187 ; N/A      ; N/A     ; -3.000              ;
+;  SCL             ; -0.757 ; 0.187 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -9.508 ; 0.0   ; 0.0      ; 0.0     ; -24.132             ;
+;  SCL             ; -9.508 ; 0.000 ; N/A      ; N/A     ; -24.132             ;
 +------------------+--------+-------+----------+---------+---------------------+
 
 
@@ -398,8 +878,6 @@ No synchronizer chains to report.
 ; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; SDA_int       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; hab_dir       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; hab_data      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
@@ -411,11 +889,8 @@ No synchronizer chains to report.
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
 ; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clock                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SCL                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SDA                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; fin_dir                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; fin_data                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SOY                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -427,9 +902,7 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; SDA_int       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.38 V              ; -0.0145 V           ; 0.169 V                              ; 0.026 V                              ; 4.83e-10 s                  ; 4.71e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.38 V             ; -0.0145 V          ; 0.169 V                             ; 0.026 V                             ; 4.83e-10 s                 ; 4.71e-10 s                 ; Yes                       ; Yes                       ;
-; hab_dir       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.38 V              ; -0.0145 V           ; 0.169 V                              ; 0.026 V                              ; 4.83e-10 s                  ; 4.71e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.38 V             ; -0.0145 V          ; 0.169 V                             ; 0.026 V                             ; 4.83e-10 s                 ; 4.71e-10 s                 ; Yes                       ; Yes                       ;
-; hab_data      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.38 V              ; -0.0145 V           ; 0.169 V                              ; 0.026 V                              ; 4.83e-10 s                  ; 4.71e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.38 V             ; -0.0145 V          ; 0.169 V                             ; 0.026 V                             ; 4.83e-10 s                 ; 4.71e-10 s                 ; Yes                       ; Yes                       ;
+; SDA_int       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.45e-09 V                   ; 2.38 V              ; -0.0609 V           ; 0.148 V                              ; 0.095 V                              ; 2.82e-10 s                  ; 2.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.45e-09 V                  ; 2.38 V             ; -0.0609 V          ; 0.148 V                             ; 0.095 V                             ; 2.82e-10 s                 ; 2.59e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.61e-09 V                   ; 2.38 V              ; -0.00274 V          ; 0.141 V                              ; 0.006 V                              ; 4.7e-10 s                   ; 6.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.61e-09 V                  ; 2.38 V             ; -0.00274 V         ; 0.141 V                             ; 0.006 V                             ; 4.7e-10 s                  ; 6.02e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -440,9 +913,7 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; SDA_int       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.00832 V          ; 0.101 V                              ; 0.024 V                              ; 6.39e-10 s                  ; 6e-10 s                     ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.00832 V         ; 0.101 V                             ; 0.024 V                             ; 6.39e-10 s                 ; 6e-10 s                    ; Yes                       ; Yes                       ;
-; hab_dir       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.00832 V          ; 0.101 V                              ; 0.024 V                              ; 6.39e-10 s                  ; 6e-10 s                     ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.00832 V         ; 0.101 V                             ; 0.024 V                             ; 6.39e-10 s                 ; 6e-10 s                    ; Yes                       ; Yes                       ;
-; hab_data      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.00832 V          ; 0.101 V                              ; 0.024 V                              ; 6.39e-10 s                  ; 6e-10 s                     ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.00832 V         ; 0.101 V                             ; 0.024 V                             ; 6.39e-10 s                 ; 6e-10 s                    ; Yes                       ; Yes                       ;
+; SDA_int       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.74e-07 V                   ; 2.36 V              ; -0.0201 V           ; 0.072 V                              ; 0.033 V                              ; 4.04e-10 s                  ; 3.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.74e-07 V                  ; 2.36 V             ; -0.0201 V          ; 0.072 V                             ; 0.033 V                             ; 4.04e-10 s                 ; 3.29e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.00643 V          ; 0.081 V                              ; 0.031 V                              ; 5.31e-10 s                  ; 7.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.00643 V         ; 0.081 V                             ; 0.031 V                             ; 5.31e-10 s                 ; 7.59e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -453,9 +924,7 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; SDA_int       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
-; hab_dir       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
-; hab_data      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; SDA_int       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -466,7 +935,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clock      ; clock    ; 9        ; 0        ; 0        ; 0        ;
+; SCL        ; SCL      ; 89       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -476,7 +945,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clock      ; clock    ; 9        ; 0        ; 0        ; 0        ;
+; SCL        ; SCL      ; 89       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -500,10 +969,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 17    ; 17   ;
-; Unconstrained Output Ports      ; 3     ; 3    ;
-; Unconstrained Output Port Paths ; 6     ; 6    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 24    ; 24   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 2     ; 2    ;
 +---------------------------------+-------+------+
 
 
@@ -512,7 +981,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------+-------+------+-------------+
 ; Target ; Clock ; Type ; Status      ;
 +--------+-------+------+-------------+
-; clock  ; clock ; Base ; Constrained ;
+; SCL    ; SCL   ; Base ; Constrained ;
 +--------+-------+------+-------------+
 
 
@@ -522,9 +991,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
 ; SDA        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SOY        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; fin_data   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; fin_dir    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
@@ -535,8 +1001,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
 ; SDA_int     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; hab_data    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; hab_dir     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -546,9 +1010,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
 ; SDA        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SOY        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; fin_data   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; fin_dir    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
@@ -559,8 +1020,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
 ; SDA_int     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; hab_data    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; hab_dir     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -570,7 +1029,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Nov  6 20:26:41 2024
+    Info: Processing started: Thu Nov  7 01:17:57 2024
 Info: Command: quartus_sta ej_e -c ej_e
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -580,57 +1039,57 @@ Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ej_e.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name clock clock
+    Info (332105): create_clock -period 1.000 -name SCL SCL
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.217
+Info (332146): Worst-case setup slack is -0.757
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.217              -0.399 clock 
+    Info (332119):    -0.757              -9.508 SCL 
 Info (332146): Worst-case hold slack is 0.358
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.358               0.000 clock 
+    Info (332119):     0.358               0.000 SCL 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -8.000 clock 
+    Info (332119):    -3.000             -23.000 SCL 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.094
+Info (332146): Worst-case setup slack is -0.573
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.094              -0.165 clock 
-Info (332146): Worst-case hold slack is 0.313
+    Info (332119):    -0.573              -6.601 SCL 
+Info (332146): Worst-case hold slack is 0.312
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.313               0.000 clock 
+    Info (332119):     0.312               0.000 SCL 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -8.000 clock 
+    Info (332119):    -3.000             -23.000 SCL 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 0.327
+Info (332146): Worst-case setup slack is 0.020
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.327               0.000 clock 
+    Info (332119):     0.020               0.000 SCL 
 Info (332146): Worst-case hold slack is 0.187
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.187               0.000 clock 
+    Info (332119):     0.187               0.000 SCL 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
@@ -638,12 +1097,12 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -8.285 clock 
+    Info (332119):    -3.000             -24.132 SCL 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 13220 megabytes
-    Info: Processing ended: Wed Nov  6 20:26:43 2024
+    Info: Processing ended: Thu Nov  7 01:17:59 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

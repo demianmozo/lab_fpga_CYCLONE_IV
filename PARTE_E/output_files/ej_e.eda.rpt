@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ej_e
-Wed Nov  6 20:26:45 2024
+Thu Nov  7 01:18:01 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -37,9 +37,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Nov  6 20:26:45 2024 ;
+; EDA Netlist Writer Status ; Successful - Thu Nov  7 01:18:01 2024 ;
 ; Revision Name             ; ej_e                                  ;
-; Top-level Entity Name     ; control_i2c_esclavo                   ;
+; Top-level Entity Name     ; i2c_esclavo_completo                  ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -81,14 +81,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Nov  6 20:26:44 2024
+    Info: Processing started: Thu Nov  7 01:18:01 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off ej_e -c ej_e
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file ej_e.vho in folder "/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/simulation/questa/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 13074 megabytes
-    Info: Processing ended: Wed Nov  6 20:26:45 2024
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Nov  7 01:18:01 2024
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

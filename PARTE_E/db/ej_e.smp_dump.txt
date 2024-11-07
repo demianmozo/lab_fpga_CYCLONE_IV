@@ -1,5 +1,5 @@
 
-State Machine - |control_i2c_esclavo|fstate
+State Machine - |i2c_esclavo_completo|control_i2c_esclavo:inst|fstate
 Name fstate.Guarda_Data fstate.ACK fstate.RW fstate.Guarda_Dir fstate.Idle 
 fstate.Idle 0 0 0 0 0 
 fstate.Guarda_Dir 0 0 0 1 1 

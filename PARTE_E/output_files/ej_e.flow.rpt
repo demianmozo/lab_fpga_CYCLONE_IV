@@ -1,5 +1,5 @@
 Flow report for ej_e
-Wed Nov  6 20:26:45 2024
+Thu Nov  7 01:18:01 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov  6 20:26:45 2024          ;
+; Flow Status                        ; Successful - Thu Nov  7 01:18:01 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_e                                           ;
-; Top-level Entity Name              ; control_i2c_esclavo                            ;
+; Top-level Entity Name              ; i2c_esclavo_completo                           ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE22F17C6                                   ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 11 / 22,320 ( < 1 % )                          ;
-;     Total combinational functions  ; 11 / 22,320 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 5 / 22,320 ( < 1 % )                           ;
-; Total registers                    ; 5                                              ;
-; Total pins                         ; 9 / 154 ( 6 % )                                ;
+; Total logic elements               ; 29 / 22,320 ( < 1 % )                          ;
+;     Total combinational functions  ; 24 / 22,320 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 20 / 22,320 ( < 1 % )                          ;
+; Total registers                    ; 20                                             ;
+; Total pins                         ; 4 / 154 ( 3 % )                                ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                            ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                                ;
@@ -65,43 +65,44 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/06/2024 20:26:10 ;
+; Start date & time ; 11/07/2024 01:17:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ej_e                ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                        ;
-+--------------------------------------+----------------------------------------+---------------+---------------------+-----------------------------------+
-; Assignment Name                      ; Value                                  ; Default Value ; Entity Name         ; Section Id                        ;
-+--------------------------------------+----------------------------------------+---------------+---------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 121369201325.173093557009004           ; --            ; --                  ; --                                ;
-; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --                  ; tb_control_i2c_esclavo            ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                  ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                  ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                  ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                  ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_control_i2c_esclavo                 ; --            ; --                  ; eda_simulation                    ;
-; EDA_NETLIST_WRITER_OUTPUT_DIR        ; simulation/questa                      ; --            ; --                  ; eda_simulation                    ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --                  ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (VHDL)               ; <None>        ; --                  ; --                                ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --                  ; eda_simulation                    ;
-; EDA_TEST_BENCH_FILE                  ; tb_control_i2c_esclavo.vhd             ; --            ; --                  ; tb_control_i2c_esclavo            ;
-; EDA_TEST_BENCH_MODULE_NAME           ; tb_control_i2c_esclavo                 ; --            ; --                  ; tb_control_i2c_esclavo            ;
-; EDA_TEST_BENCH_NAME                  ; tb_control_i2c_esclavo                 ; --            ; --                  ; eda_simulation                    ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --                  ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --                  ; --                                ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --                  ; --                                ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --                  ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; control_i2c_esclavo ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; control_i2c_esclavo ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; control_i2c_esclavo ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --                  ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                  ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --                  ; --                                ;
-; TOP_LEVEL_ENTITY                     ; control_i2c_esclavo                    ; ej_e          ; --                  ; --                                ;
-+--------------------------------------+----------------------------------------+---------------+---------------------+-----------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                         ;
++--------------------------------------+----------------------------------------+---------------+----------------------+-----------------------------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name          ; Section Id                        ;
++--------------------------------------+----------------------------------------+---------------+----------------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID                ; 121369201325.173095304405284           ; --            ; --                   ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --                   ; tb_i2c_esclavo_completo           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                   ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                   ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                   ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                   ; eda_board_design_symbol           ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_i2c_esclavo_completo                ; --            ; --                   ; eda_simulation                    ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR        ; simulation/questa                      ; --            ; --                   ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --                   ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (VHDL)               ; <None>        ; --                   ; --                                ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --                   ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; tb_i2c_esclavo_completo.vhd            ; --            ; --                   ; tb_i2c_esclavo_completo           ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_i2c_esclavo_completo                ; --            ; --                   ; tb_i2c_esclavo_completo           ;
+; EDA_TEST_BENCH_NAME                  ; tb_i2c_esclavo_completo                ; --            ; --                   ; eda_simulation                    ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 2 us                                   ; --            ; --                   ; tb_i2c_esclavo_completo           ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --                   ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --                   ; --                                ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --                   ; --                                ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --                   ; --                                ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; i2c_esclavo_completo ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; i2c_esclavo_completo ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; i2c_esclavo_completo ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --                   ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                   ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --                   ; --                                ;
+; TOP_LEVEL_ENTITY                     ; i2c_esclavo_completo                   ; ej_e          ; --                   ; --                                ;
++--------------------------------------+----------------------------------------+---------------+----------------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -109,12 +110,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 13288 MB            ; 00:00:43                           ;
-; Fitter               ; 00:00:07     ; 1.0                     ; 13979 MB            ; 00:00:08                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 13288 MB            ; 00:00:43                           ;
+; Fitter               ; 00:00:07     ; 1.0                     ; 13979 MB            ; 00:00:09                           ;
 ; Assembler            ; 00:00:02     ; 1.0                     ; 13186 MB            ; 00:00:02                           ;
 ; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 13220 MB            ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 13058 MB            ; 00:00:01                           ;
-; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:56                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 13058 MB            ; 00:00:01                           ;
+; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:57                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

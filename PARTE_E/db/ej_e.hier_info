@@ -1,4 +1,15 @@
-|control_i2c_esclavo
+|i2c_esclavo_completo
+SDA_int <= control_i2c_esclavo:inst.SDA_int
+reset => control_i2c_esclavo:inst.reset
+SCL => control_i2c_esclavo:inst.clock
+SCL => guarda_dir:inst3.SCL
+SCL => guarda_data:inst2.SCL
+SDA => control_i2c_esclavo:inst.SDA
+SDA => guarda_dir:inst3.SDA
+SDA => guarda_data:inst2.SDA
+
+
+|i2c_esclavo_completo|control_i2c_esclavo:inst
 reset => reg_fstate.Idle.OUTPUTSELECT
 reset => reg_fstate.Guarda_Dir.OUTPUTSELECT
 reset => reg_fstate.RW.OUTPUTSELECT
@@ -19,8 +30,49 @@ fin_dir => process_1.IN1
 fin_dir => process_1.IN1
 fin_data => Selector0.IN4
 fin_data => Selector2.IN2
-SDA_int << SDA_int.DB_MAX_OUTPUT_PORT_TYPE
-hab_dir << hab_dir.DB_MAX_OUTPUT_PORT_TYPE
-hab_data << hab_data.DB_MAX_OUTPUT_PORT_TYPE
+SDA_int <= SDA_int.DB_MAX_OUTPUT_PORT_TYPE
+hab_dir <= hab_dir.DB_MAX_OUTPUT_PORT_TYPE
+hab_data <= hab_data.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|i2c_esclavo_completo|guarda_dir:inst3
+SDA => registro.DATAB
+SCL => finalizo_int.CLK
+SCL => registro[0].CLK
+SCL => registro[1].CLK
+SCL => registro[2].CLK
+SCL => registro[3].CLK
+SCL => registro[4].CLK
+SCL => registro[5].CLK
+SCL => registro[6].CLK
+SCL => contador[0].CLK
+SCL => contador[1].CLK
+SCL => contador[2].CLK
+habilitacion => contador.OUTPUTSELECT
+habilitacion => contador.OUTPUTSELECT
+habilitacion => contador.OUTPUTSELECT
+habilitacion => finalizo_int.OUTPUTSELECT
+habilitacion => registro[0].ENA
+habilitacion => registro[1].ENA
+habilitacion => registro[2].ENA
+habilitacion => registro[3].ENA
+habilitacion => registro[4].ENA
+habilitacion => registro[5].ENA
+habilitacion => registro[6].ENA
+igual <= igual.DB_MAX_OUTPUT_PORT_TYPE
+finalizo <= finalizo_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|i2c_esclavo_completo|guarda_data:inst2
+SDA => ~NO_FANOUT~
+SCL => finalizo_int.CLK
+SCL => contador[0].CLK
+SCL => contador[1].CLK
+SCL => contador[2].CLK
+habilitacion => contador.OUTPUTSELECT
+habilitacion => contador.OUTPUTSELECT
+habilitacion => contador.OUTPUTSELECT
+habilitacion => finalizo_int.OUTPUTSELECT
+finalizo <= finalizo_int.DB_MAX_OUTPUT_PORT_TYPE
 
 
