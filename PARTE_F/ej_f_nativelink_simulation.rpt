@@ -1,0 +1,19 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneive
+Quartus root          :  c:/intelfpga_lite/23.1std/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/23.1std/quartus/eda/sim_lib
+Simulation Tool       :  questa intel fpga
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  ej_f.vho
+Sim SDF file          :  ej_f__vhdl.sdo
+Sim dir               :  simulation\questa
+
+=======================================================
+
+Error: couldn't change working directory to "simulation/questa": no such file or directory

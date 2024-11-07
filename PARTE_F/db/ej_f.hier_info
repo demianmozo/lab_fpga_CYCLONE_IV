@@ -1,0 +1,25 @@
+|division
+input_a[0] => Mult0.IN15
+input_a[1] => Mult0.IN14
+input_a[2] => Mult0.IN13
+input_a[3] => Mult0.IN12
+input_a[4] => Mult0.IN11
+input_a[5] => Mult0.IN10
+input_b[0] => Mult1.IN15
+input_b[1] => Mult1.IN14
+input_b[2] => Mult1.IN13
+input_b[3] => Mult1.IN12
+input_b[4] => Mult1.IN11
+input_b[5] => Mult1.IN10
+output_c[0] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+output_c[1] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+output_c[2] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+output_c[3] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+output_c[4] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+output_c[5] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+output_c[6] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+output_c[7] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+output_c[8] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+output_c[9] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+
+
