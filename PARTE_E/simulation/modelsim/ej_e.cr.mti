@@ -16,6 +16,14 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity guarda_data
 -- Compiling architecture behavior of guarda_data
 
+} {} {}} //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/control_i2c_esclavo.vhd {1 {vcom -work work -2002 -explicit //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/control_i2c_esclavo.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity control_i2c_esclavo
+-- Compiling architecture BEHAVIOR of control_i2c_esclavo
+
 } {} {}} //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/guarda_dir.vhd {1 {vcom -work work -2002 -explicit //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/guarda_dir.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
@@ -24,14 +32,6 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package NUMERIC_STD
 -- Compiling entity guarda_dir
 -- Compiling architecture behavior of guarda_dir
-
-} {} {}} //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/control_i2c_esclavo.vhd {1 {vcom -work work -2002 -explicit //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/control_i2c_esclavo.vhd
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity control_i2c_esclavo
--- Compiling architecture BEHAVIOR of control_i2c_esclavo
 
 } {} {}} //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/i2c_esclavo_completo.vhd {1 {vcom -work work -2002 -explicit //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/i2c_esclavo_completo.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
