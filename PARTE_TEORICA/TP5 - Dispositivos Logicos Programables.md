@@ -140,7 +140,7 @@ end Behavioral;
 
    c) Conteste ¿A qué frecuencia máxima podrá operar el circuito? ¿Cómo podría incrementarlo? Explique ventajas y desventajas de aplicar la solución sugerida.
 
-      ● La frecuencia maxima de operacion dependera del retardo de los bloques combinacionales en cascada utilizados (comparador + OR gigante). 
+      ● La frecuencia maxima de operacion dependera del tiempo que tarden en leerse los datos de la RAM y del retardo de los bloques combinacionales en cascada utilizados (comparador + OR gigante). Para mejorar esto, podemos precargar los datos en la FPGA para no tener que realizar la lectura de la memoria. El problema de esto es que deberemos programar la placa cada vez que cambien los datos de la memoria.
 
    d) Conteste ¿Qué tamaño deberá tener la memoria RAM donde se sintetiza la tabla?
 
