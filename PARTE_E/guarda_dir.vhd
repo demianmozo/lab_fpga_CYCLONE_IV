@@ -16,7 +16,7 @@ architecture behavior of guarda_dir is
 
     signal contador    : unsigned(2 downto 0) := (others => '0'); -- Contador de 3 bits (0 a 6)
     signal registro    : std_logic_vector(6 downto 0) := (others => '0'); -- Registro de desplazamiento de 7 bits
-    signal direccion   : std_logic_vector(6 downto 0) := "1010101"; -- Registro interno de comparación
+    signal direccion   : std_logic_vector(6 downto 0) := "0010001"; -- Registro interno de comparación
 	 signal finalizo_int : std_logic := '0'; -- Señal interna para finalizo
     
 begin

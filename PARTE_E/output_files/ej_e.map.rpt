@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ej_e
-Thu Nov  7 01:17:44 2024
+Thu Nov  7 21:30:51 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov  7 01:17:44 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov  7 21:30:51 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_e                                           ;
 ; Top-level Entity Name              ; i2c_esclavo_completo                           ;
@@ -297,7 +297,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Thu Nov  7 01:17:23 2024
+    Info: Processing started: Thu Nov  7 21:30:33 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ej_e -c ej_e
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -334,9 +334,9 @@ Info (21057): Implemented 35 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 31 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 13288 megabytes
-    Info: Processing ended: Thu Nov  7 01:17:44 2024
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Peak virtual memory: 13294 megabytes
+    Info: Processing ended: Thu Nov  7 21:30:51 2024
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:41
 
 
