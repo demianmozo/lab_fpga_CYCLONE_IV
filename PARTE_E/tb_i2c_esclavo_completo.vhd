@@ -5,78 +5,110 @@ USE ieee.numeric_std.ALL;
 ENTITY tb_i2c_esclavo_completo IS
 END tb_i2c_esclavo_completo;
 
-ARCHITECTURE behavior OF tb_i2c_esclavo_completo IS
+ARCHITECTURE behavior OF tb_i2c_esclavo_completo IS 
 
-    -- Component declaration of the design under test (DUT)
-    COMPONENT i2c_esclavo_completo
-        PORT(
-            SDA : IN std_logic;
-            SCL : IN std_logic;
-            reset : IN std_logic;
-            SDA_int : OUT std_logic
+    -- Component Declaration for the Unit Under Test (UUT)
+    COMPONENT control_i2c_esclavo
+    PORT(
+         reset : IN  std_logic;
+         clock : IN  std_logic;
+         SDA : IN  std_logic;
+         SOY : IN  std_logic;
+         fin_dir : IN  std_logic;
+         fin_data : IN  std_logic;
+         SDA_int : OUT  std_logic;
+         hab_dir : OUT  std_logic;
+         hab_data : OUT  std_logic
         );
     END COMPONENT;
+    
+    -- Signals for stimulating the inputs of UUT
+    signal reset : std_logic := '0';
+    signal clock : std_logic := '0';
+    signal SDA : std_logic := '0';
+    signal SOY : std_logic := '0';
+    signal fin_dir : std_logic := '0';
+    signal fin_data : std_logic := '0';
 
-    -- Signals to connect to the DUT
-    signal SDA     : std_logic := '0';
-    signal SCL     : std_logic := '0';
-    signal reset   : std_logic := '0';
+    -- Signals for observing the outputs of UUT
     signal SDA_int : std_logic;
+    signal hab_dir : std_logic;
+    signal hab_data : std_logic;
 
     -- Clock period definition
-    constant clk_period : time := 10 ns;
-
-    -- Vector for SDA sequence (24 bits)
-    signal SDA_sequence : std_logic_vector(23 downto 0) := "100100011000100000110000";  
+    constant clock_period : time := 20 ns;
 
 BEGIN
 
     -- Instantiate the Unit Under Test (UUT)
-    uut: i2c_esclavo_completo
-        PORT MAP(
-            SDA => SDA,
-            SCL => SCL,
-            reset => reset,
-            SDA_int => SDA_int
+    uut: control_i2c_esclavo PORT MAP (
+          reset => reset,
+          clock => clock,
+          SDA => SDA,
+          SOY => SOY,
+          fin_dir => fin_dir,
+          fin_data => fin_data,
+          SDA_int => SDA_int,
+          hab_dir => hab_dir,
+          hab_data => hab_data
         );
 
-    -- Clock generation process
-    clk_process :process
+    -- Clock process definitions
+    clock_process :process
     begin
-        SCL <= '0';
-        wait for clk_period / 2;
-        SCL <= '1';
-        wait for clk_period / 2;
+        clock <= '0';
+        wait for clock_period/2;
+        clock <= '1';
+        wait for clock_period/2;
     end process;
 
     -- Stimulus process
     stim_proc: process
     begin
-        -- Reset
+        -- Reset the system
         reset <= '1';
-        wait for 20 ns;
+        wait for 40 ns;
         reset <= '0';
+        
+        -- Condition for the start of transmission
+        -- SDA should be 0 when SCL is 1 before the first falling edge
+        SDA <= '1';  -- SDA high initially
+        wait for clock_period;
+        SDA <= '0';  -- Start condition: SDA goes low when SCL is high
+        wait for clock_period;
 
-        -- Wait for the clock to stabilize
-        wait for 10 ns;
+        -- Apply the SDA sequence: 1 0 0 1 0 0 0 1 1 0 0 0 1 0 0 0 0 0 1 1
+        SDA <= '1'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '1'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '1'; wait for clock_period;
+        SDA <= '1'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '1'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '0'; wait for clock_period;
+        SDA <= '1'; wait for clock_period;
+        SDA <= '1'; wait for clock_period;
 
-        -- Inserto SDA
-        for i in 0 to 23 loop
-            if i = 0 then
-                -- Before the first falling edge of SCL, set SDA = 0 (CONDICION DE START)
-                SDA <= '0';
-                wait until SCL = '1';  -- Wait for the rising edge of SCL
-            else
-                -- Apply the SDA sequence on the falling edge of SCL
-                wait until SCL = '0';  -- Wait for the falling edge of SCL
-                SDA <= SDA_sequence(i);
-            end if;
-        end loop;
-
-        -- Finish simulation after the sequence
-        wait for 100 ns;
-        assert false report "End of testbench" severity note;
+        -- Simulate SOY, fin_dir, and fin_data signals for evaluation
+        SOY <= '1';
+        fin_dir <= '1';
+        fin_data <= '0';
+        wait for clock_period;
+        fin_data <= '1';
+        wait for clock_period;
+        
+        -- End simulation after the test
         wait;
     end process;
 
-END behavior;
+END;

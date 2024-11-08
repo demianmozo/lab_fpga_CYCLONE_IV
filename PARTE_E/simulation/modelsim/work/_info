@@ -4,7 +4,7 @@ K3
 cModel Technology
 d\\Mac\Home\Desktop\lab_fpga_CYCLONE_IV\PARTE_C\simulation\modelsim
 Econtrol_i2c_esclavo
-Z0 w1730935006
+Z0 w1731025776
 Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z3 d\\Mac\Home\Desktop\lab_fpga_CYCLONE_IV\PARTE_E\simulation\modelsim
@@ -15,7 +15,7 @@ L22
 VliJ>8=VkiY`aij3GEiMe92
 Z6 OV;C;10.1d;51
 32
-Z7 !s108 1730952649.789000
+Z7 !s108 1731028146.558000
 Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/control_i2c_esclavo.vhd|
 Z9 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/control_i2c_esclavo.vhd|
 Z10 o-work work -2002 -explicit -O0
@@ -26,9 +26,9 @@ Abehavior
 R1
 R2
 DEx4 work 19 control_i2c_esclavo 0 22 liJ>8=VkiY`aij3GEiMe92
-l43
+l40
 L36
-VJE_k[Ii286FjQQ9jHEh4A2
+Vo5EMRdf>W8U`X?bMe?B?z0
 R6
 32
 R7
@@ -36,7 +36,7 @@ R8
 R9
 R10
 R11
-!s100 VknX_gmk=8NJ>8gK9LWGm2
+!s100 61X_dIEYcH@N<^EC76G>31
 !i10b 1
 Eguarda_data
 Z12 w1730950473
@@ -51,7 +51,7 @@ L5
 V;X1@Ifb225k9A0ETa0ChA0
 R6
 32
-Z16 !s108 1730952649.882000
+Z16 !s108 1731028146.651000
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/guarda_data.vhd|
 Z18 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/guarda_data.vhd|
 R10
@@ -76,7 +76,7 @@ R11
 !s100 :nG=5?C5U3adnATTdN1IB3
 !i10b 1
 Eguarda_dir
-Z19 w1730950005
+Z19 w1731024898
 R13
 R1
 R2
@@ -88,7 +88,7 @@ L5
 VjbEI5jG[fk[jE622EQ@UE2
 R6
 32
-Z22 !s108 1730952649.992000
+Z22 !s108 1731028146.745000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/guarda_dir.vhd|
 Z24 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/guarda_dir.vhd|
 R10
@@ -102,7 +102,7 @@ R2
 DEx4 work 10 guarda_dir 0 22 jbEI5jG[fk[jE622EQ@UE2
 l22
 L15
-V?ReFgd=k2L`?B`1Kkd8lX0
+VVzgHk>mRTPd8_YSYn8ahn2
 R6
 32
 R22
@@ -110,10 +110,10 @@ R23
 R24
 R10
 R11
-!s100 AIDn@e<cTV^fzngV8S_1P1
+!s100 6CITdn1:z@3CJd29C8g`Y1
 !i10b 1
 Ei2c_esclavo_completo
-Z25 w1730951346
+Z25 w1731027329
 R1
 R2
 R3
@@ -124,7 +124,7 @@ L25
 VHG:M]XjDGkXBP3Xa>2LEL1
 R6
 32
-Z28 !s108 1730952650.087000
+Z28 !s108 1731028146.838000
 Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/i2c_esclavo_completo.vhd|
 Z30 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/i2c_esclavo_completo.vhd|
 R10
@@ -185,7 +185,7 @@ R11
 !s100 1AHQ0VKF;UjikgQAnddCJ0
 !i10b 1
 Etb_i2c_esclavo_completo
-Z37 w1730952645
+Z37 w1731027991
 R13
 R1
 R2
@@ -199,7 +199,7 @@ VXJhiSz_DQCh<MFd8[`OzT0
 R6
 32
 !i10b 1
-Z40 !s108 1730952650.163000
+Z40 !s108 1731028146.917000
 Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/tb_i2c_esclavo_completo.vhd|
 Z42 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_E/tb_i2c_esclavo_completo.vhd|
 R10
@@ -208,11 +208,11 @@ Abehavior
 R13
 R1
 R2
-DEx4 work 23 tb_i2c_esclavo_completo 0 22 XJhiSz_DQCh<MFd8[`OzT0
-l32
+Z43 DEx4 work 23 tb_i2c_esclavo_completo 0 22 XJhiSz_DQCh<MFd8[`OzT0
+l41
 L8
-V4@7JCIkLzIThTZ?18Lc[02
-!s100 ^zgB_O?8Db;fO?o47j8XO2
+Vf@_KVaR5AlRPPVSgH8Igz0
+!s100 Wg8hUE>4[B_BjVU_@^15W2
 R6
 32
 !i10b 1

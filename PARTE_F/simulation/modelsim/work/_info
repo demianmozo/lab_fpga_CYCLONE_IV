@@ -4,7 +4,7 @@ K3
 cModel Technology
 dC:\altera\13.0sp1
 Edivision
-Z0 w1731022552
+Z0 w1731023438
 Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -16,7 +16,7 @@ L6
 VPU`:fm71:0zPU^4o6DCE[1
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1731023054.659000
+Z8 !s108 1731027227.795000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd|
 Z10 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd|
 Z11 o-work work -2002 -explicit -O0
@@ -31,6 +31,7 @@ DEx4 work 8 division 0 22 PU`:fm71:0zPU^4o6DCE[1
 l18
 L14
 V3GIf>@^V]ALQ[Od<WogQ`2
+!s100 Qn3B]mBo>?mUjhJJ92FL<1
 R7
 32
 R8
@@ -38,7 +39,6 @@ R9
 R10
 R11
 R12
-!s100 Qn3B]mBo>?mUjhJJ92FL<1
 !i10b 1
 Etb_division
 Z13 w1731022825
@@ -55,7 +55,7 @@ V`F=FO1Q1je;Y^J9f_1flQ0
 R7
 32
 !i10b 1
-Z16 !s108 1731023054.752000
+Z16 !s108 1731027227.951000
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|//Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd|
 Z18 !s107 //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd|
 R11
@@ -64,11 +64,11 @@ Asim
 R1
 R2
 R3
-DEx4 work 11 tb_division 0 22 `F=FO1Q1je;Y^J9f_1flQ0
+Z19 DEx4 work 11 tb_division 0 22 `F=FO1Q1je;Y^J9f_1flQ0
 l25
 L9
-VLGInalmCBi4E1;4UcnoiN2
-!s100 k9bP6fkNO1O5zR8IHn4Im1
+Z20 VLGInalmCBi4E1;4UcnoiN2
+Z21 !s100 k9bP6fkNO1O5zR8IHn4Im1
 R7
 32
 !i10b 1
