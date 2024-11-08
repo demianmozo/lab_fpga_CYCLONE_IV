@@ -1,5 +1,5 @@
 Flow report for ej_e
-Thu Nov  7 22:07:09 2024
+Thu Nov  7 22:17:23 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov  7 22:07:09 2024          ;
+; Flow Status                        ; Successful - Thu Nov  7 22:17:23 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_e                                           ;
 ; Top-level Entity Name              ; i2c_esclavo_completo                           ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/07/2024 22:06:33 ;
+; Start date & time ; 11/07/2024 22:16:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ej_e                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+----------------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name          ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+----------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 121369201325.173102799307780           ; --            ; --                   ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 121369201325.173102860709884           ; --            ; --                   ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --                   ; tb_i2c_esclavo_completo           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                   ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                   ; eda_board_design_boundary_scan    ;
@@ -112,10 +112,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 13294 MB            ; 00:00:41                           ;
 ; Fitter               ; 00:00:07     ; 1.0                     ; 13982 MB            ; 00:00:09                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 13188 MB            ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 13222 MB            ; 00:00:02                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 13188 MB            ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 13230 MB            ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 13060 MB            ; 00:00:01                           ;
-; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:55                           ;
+; Total                ; 00:00:30     ; --                      ; --                  ; 00:00:55                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

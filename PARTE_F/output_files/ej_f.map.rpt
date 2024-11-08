@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ej_f
-Thu Nov  7 20:40:52 2024
+Thu Nov  7 22:20:52 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov  7 20:40:52 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov  7 22:20:52 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_f                                           ;
 ; Top-level Entity Name              ; division                                       ;
@@ -170,16 +170,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ; Library ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
-; division.vhd                     ; yes             ; User VHDL File               ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd                   ;         ;
+; division.vhd                     ; yes             ; User VHDL File               ; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd                   ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
 ; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc      ;         ;
-; db/lpm_divide_4jm.tdf            ; yes             ; Auto-Generated Megafunction  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/lpm_divide_4jm.tdf          ;         ;
-; db/sign_div_unsign_slh.tdf       ; yes             ; Auto-Generated Megafunction  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/sign_div_unsign_slh.tdf     ;         ;
-; db/alt_u_div_c7f.tdf             ; yes             ; Auto-Generated Megafunction  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/alt_u_div_c7f.tdf           ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_7pc.tdf             ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_8pc.tdf             ;         ;
+; db/lpm_divide_4jm.tdf            ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/lpm_divide_4jm.tdf          ;         ;
+; db/sign_div_unsign_slh.tdf       ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/sign_div_unsign_slh.tdf     ;         ;
+; db/alt_u_div_c7f.tdf             ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/alt_u_div_c7f.tdf           ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_7pc.tdf             ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_8pc.tdf             ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
 
 
@@ -322,49 +322,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Thu Nov  7 20:40:32 2024
+    Info: Processing started: Thu Nov  7 22:20:30 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ej_f -c ej_f
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file division.vhd
-    Info (12022): Found design unit 1: division-division File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 14
-    Info (12023): Found entity 1: division File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 6
+    Info (12022): Found design unit 1: division-division File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 14
+    Info (12023): Found entity 1: division File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file tb_division.vhd
-    Info (12022): Found design unit 1: tb_division-sim File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd Line: 9
-    Info (12023): Found entity 1: tb_division File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd Line: 5
+    Info (12022): Found design unit 1: tb_division-sim File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd Line: 9
+    Info (12023): Found entity 1: tb_division File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/tb_division.vhd Line: 5
 Info (12127): Elaborating entity "division" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at division.vhd(29): signal "a_convertido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
-Warning (10492): VHDL Process Statement warning at division.vhd(30): signal "cociente_convertido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at division.vhd(19): inferring latch(es) for signal or variable "cociente_convertido", which holds its previous value in one or more paths through the process File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
-Info (10041): Inferred latch for "cociente_convertido[1]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
-Info (10041): Inferred latch for "cociente_convertido[2]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
-Info (10041): Inferred latch for "cociente_convertido[3]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
-Info (10041): Inferred latch for "cociente_convertido[4]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
-Info (10041): Inferred latch for "cociente_convertido[5]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
-Info (10041): Inferred latch for "cociente_convertido[6]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
-Info (10041): Inferred latch for "cociente_convertido[7]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
-Info (10041): Inferred latch for "cociente_convertido[8]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
-Info (10041): Inferred latch for "cociente_convertido[9]" at division.vhd(19) File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at division.vhd(29): signal "a_convertido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at division.vhd(30): signal "cociente_convertido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at division.vhd(19): inferring latch(es) for signal or variable "cociente_convertido", which holds its previous value in one or more paths through the process File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[1]" at division.vhd(19) File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[2]" at division.vhd(19) File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[3]" at division.vhd(19) File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[4]" at division.vhd(19) File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[5]" at division.vhd(19) File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[6]" at division.vhd(19) File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[7]" at division.vhd(19) File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[8]" at division.vhd(19) File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
+Info (10041): Inferred latch for "cociente_convertido[9]" at division.vhd(19) File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 19
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 29
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4jm.tdf
-    Info (12023): Found entity 1: lpm_divide_4jm File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/lpm_divide_4jm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_4jm File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/lpm_divide_4jm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_slh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_slh File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/sign_div_unsign_slh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_slh File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/sign_div_unsign_slh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_c7f.tdf
-    Info (12023): Found entity 1: alt_u_div_c7f File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/alt_u_div_c7f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_c7f File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/alt_u_div_c7f.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_7pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_7pc File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_8pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_8pc File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/db/add_sub_8pc.tdf Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "cociente[9]" is stuck at GND File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+    Warning (13410): Pin "cociente[9]" is stuck at GND File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -373,9 +373,9 @@ Info (21057): Implemented 212 device resources after synthesis - the final resou
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 190 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 13298 megabytes
-    Info: Processing ended: Thu Nov  7 20:40:52 2024
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Peak virtual memory: 13299 megabytes
+    Info: Processing ended: Thu Nov  7 22:20:52 2024
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:46
 
 

@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
--- DATE "11/07/2024 20:41:12"
+-- DATE "11/07/2024 22:21:14"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -79,7 +79,7 @@ ENTITY 	division IS
     PORT (
 	a : IN std_logic_vector(5 DOWNTO 0);
 	b : IN std_logic_vector(5 DOWNTO 0);
-	cociente : BUFFER std_logic_vector(9 DOWNTO 0)
+	cociente : OUT std_logic_vector(9 DOWNTO 0)
 	);
 END division;
 

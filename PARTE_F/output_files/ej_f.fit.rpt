@@ -1,5 +1,5 @@
 Fitter report for ej_f
-Thu Nov  7 20:41:02 2024
+Thu Nov  7 22:21:03 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Nov  7 20:41:02 2024          ;
+; Fitter Status                      ; Successful - Thu Nov  7 22:21:03 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_f                                           ;
 ; Top-level Entity Name              ; division                                       ;
@@ -159,8 +159,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.6%      ;
-;     Processors 3-4         ;   0.5%      ;
+;     Processors 2-4         ;   0.6%      ;
 +----------------------------+-------------+
 
 
@@ -1180,18 +1179,18 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node Equal0~1  File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 25
+Info (176353): Automatically promoted node Equal0~1  File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 25
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node cociente~0 File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
-        Info (176357): Destination node cociente~1 File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
-        Info (176357): Destination node cociente~2 File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
-        Info (176357): Destination node cociente~3 File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
-        Info (176357): Destination node cociente~4 File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
-        Info (176357): Destination node cociente~5 File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
-        Info (176357): Destination node cociente~6 File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
-        Info (176357): Destination node cociente~7 File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
-        Info (176357): Destination node cociente~8 File: //mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+        Info (176357): Destination node cociente~0 File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+        Info (176357): Destination node cociente~1 File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+        Info (176357): Destination node cociente~2 File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+        Info (176357): Destination node cociente~3 File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+        Info (176357): Destination node cociente~4 File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+        Info (176357): Destination node cociente~5 File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+        Info (176357): Destination node cociente~6 File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+        Info (176357): Destination node cociente~7 File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
+        Info (176357): Destination node cociente~8 File: //Mac/Home/Desktop/lab_fpga_CYCLONE_IV/PARTE_F/division.vhd Line: 10
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1221,7 +1220,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.37 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.49 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1229,10 +1228,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /Desktop/lab_fpga_CYCLONE_IV/PARTE_F/output_files/ej_f.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 13968 megabytes
-    Info: Processing ended: Thu Nov  7 20:41:03 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 13969 megabytes
+    Info: Processing ended: Thu Nov  7 22:21:04 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+

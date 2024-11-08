@@ -7,7 +7,7 @@ END tb_i2c_esclavo_completo;
 
 ARCHITECTURE behavior OF tb_i2c_esclavo_completo IS 
 
-    -- Component Declaration for the Unit Under Test (UUT)
+    -- Component Declaration for the Unit Under Test (UUT) AHORA SI ACA PONGO TODAS LAS SEÑALES QUE ME INTERESAN
     COMPONENT control_i2c_esclavo
     PORT(
          reset : IN  std_logic;
@@ -70,14 +70,13 @@ BEGIN
         wait for 40 ns;
         reset <= '0';
         
-        -- Condition for the start of transmission
-        -- SDA should be 0 when SCL is 1 before the first falling edge
-        SDA <= '1';  -- SDA high initially
+        -- ESTA ES LA CONDICION DE START, CREO QUE SE SIMULA COMO CORRESPONDE
+        SDA <= '1';  
         wait for clock_period;
-        SDA <= '0';  -- Start condition: SDA goes low when SCL is high
+        SDA <= '0';  --SDA goes low when SCL is high
         wait for clock_period;
 
-        -- Apply the SDA sequence: 1 0 0 1 0 0 0 1 1 0 0 0 1 0 0 0 0 0 1 1
+        -- entro con la secuencia de la guia: 1 0 0 1 0 0 0 1 1 0 0 0 1 0 0 0 0 0 1 1
         SDA <= '1'; wait for clock_period;
         SDA <= '0'; wait for clock_period;
         SDA <= '0'; wait for clock_period;
@@ -99,7 +98,7 @@ BEGIN
         SDA <= '1'; wait for clock_period;
         SDA <= '1'; wait for clock_period;
 
-        -- Simulate SOY, fin_dir, and fin_data signals for evaluation
+        -- aca chat gpt simula SOY, fin_dir, y fin_data estara bien??
         SOY <= '1';
         fin_dir <= '1';
         fin_data <= '0';

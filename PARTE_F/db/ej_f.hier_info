@@ -17,15 +17,15 @@ b[4] => Div0.IN11
 b[4] => Equal0.IN1
 b[5] => Div0.IN10
 b[5] => Equal0.IN0
-cociente[0] << cociente.DB_MAX_OUTPUT_PORT_TYPE
-cociente[1] << cociente.DB_MAX_OUTPUT_PORT_TYPE
-cociente[2] << cociente.DB_MAX_OUTPUT_PORT_TYPE
-cociente[3] << cociente.DB_MAX_OUTPUT_PORT_TYPE
-cociente[4] << cociente.DB_MAX_OUTPUT_PORT_TYPE
-cociente[5] << cociente.DB_MAX_OUTPUT_PORT_TYPE
-cociente[6] << cociente.DB_MAX_OUTPUT_PORT_TYPE
-cociente[7] << cociente.DB_MAX_OUTPUT_PORT_TYPE
-cociente[8] << cociente.DB_MAX_OUTPUT_PORT_TYPE
-cociente[9] << <GND>
+cociente[0] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+cociente[1] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+cociente[2] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+cociente[3] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+cociente[4] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+cociente[5] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+cociente[6] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+cociente[7] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+cociente[8] <= cociente.DB_MAX_OUTPUT_PORT_TYPE
+cociente[9] <= <GND>
 
 

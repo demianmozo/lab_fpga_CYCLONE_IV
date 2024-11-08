@@ -1,5 +1,5 @@
 Fitter report for ej_e
-Thu Nov  7 22:07:00 2024
+Thu Nov  7 22:17:14 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Nov  7 22:07:00 2024          ;
+; Fitter Status                      ; Successful - Thu Nov  7 22:17:14 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ej_e                                           ;
 ; Top-level Entity Name              ; i2c_esclavo_completo                           ;
@@ -1017,7 +1017,7 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /Desktop/lab_fpga_CYCLONE_IV/PARTE_E/output_files/ej_e.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 13982 megabytes
-    Info: Processing ended: Thu Nov  7 22:07:00 2024
+    Info: Processing ended: Thu Nov  7 22:17:14 2024
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:09
 

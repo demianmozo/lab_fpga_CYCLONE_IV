@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
--- DATE "11/07/2024 22:07:09"
+-- DATE "11/07/2024 22:17:23"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
